@@ -1,0 +1,14 @@
+@startuml
+title En qué orden ocurren los escenarios de compra
+
+start
+:sd Seleccionar productos;
+:sd Confirmar pedido;
+if (¿Pago aceptado?) then (sí)
+  :sd Cobrar;
+  :sd Emitir recibo;
+else (no)
+  :sd Rechazar pago;
+endif
+stop
+@enduml

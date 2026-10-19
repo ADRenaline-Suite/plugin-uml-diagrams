@@ -1,0 +1,22 @@
+@startuml
+skinparam shadowing false
+hide empty members
+title Qué datos tiene un pedido y cómo se relaciona con su pago
+
+class Pedido {
+  +numero : String
+  +total() : Decimal
+  +confirmar()
+}
+class LineaPedido {
+  +cantidad : Integer
+  +subtotal() : Decimal
+}
+class Pago {
+  +importe : Decimal
+  +autorizar()
+}
+
+Pedido "1" *-- "1..*" LineaPedido : contiene
+Pedido "1" --> "0..1" Pago : se liquida con
+@enduml

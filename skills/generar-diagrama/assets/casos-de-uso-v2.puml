@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+title Qué puede hacer el comprador en la tienda
+
+actor Comprador
+rectangle "Tienda" {
+  usecase "Pagar pedido" as pagar
+  usecase "Elegir medio de pago" as medio
+  usecase "Aplicar cupón" as cupon
+  pagar .> medio : <<include>>
+  pagar .> cupon : <<extend>>
+}
+Comprador --> pagar
+@enduml

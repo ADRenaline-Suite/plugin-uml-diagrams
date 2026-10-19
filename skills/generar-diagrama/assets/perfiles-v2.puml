@@ -1,0 +1,11 @@
+@startuml
+title Estereotipo de dominio para lo que se puede autorizar
+
+package "perfil Pagos" <<profile>> {
+  class Autorizable <<stereotype>> {
+    +codigoAutorizacion : String
+  }
+}
+class Class <<metaclass>>
+Autorizable -up-|> Class
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+title Dónde corre la tienda en producción
+
+node "Navegador" as nav
+node "Servidor de tienda" as srv {
+  artifact "tienda.jar" as app
+}
+node "Pasarela" as pas {
+  artifact "conector-banco" as con
+}
+nav --> srv : HTTPS
+srv --> pas : HTTPS
+@enduml

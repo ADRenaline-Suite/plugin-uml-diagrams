@@ -1,0 +1,10 @@
+@startuml
+title Quién depende de quién en la tienda
+
+package "ventas" as ventas
+package "pagos" as pagos
+package "catalogo" as catalogo
+
+ventas ..> pagos : <<import>>
+ventas ..> catalogo : <<import>>
+@enduml

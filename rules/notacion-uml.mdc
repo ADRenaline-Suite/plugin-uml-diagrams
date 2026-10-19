@@ -1,0 +1,18 @@
+---
+description: Impide mezclar la notación UML 1 y UML 2 al generar un diagrama
+alwaysApply: true
+---
+
+# Notación UML
+
+Antes de dibujar, lee `skills/generar-diagrama/SKILL.md` y una sola referencia: la del tipo y la versión pedidos.
+
+Un pedido v1 usa la referencia `*-v1`. Un pedido v2 usa la referencia `*-v2`.
+
+Secuencia v1 no lleva fragmentos combinados (`alt`, `opt`, `loop`, `par`). Actividad v1 es un grafo de actividades, sin flujo de tokens ni pines. Componente v1 no lleva puertos ni conectores.
+
+Colaboración es el nombre v1. Comunicación es el nombre v2. Estados (statechart) es v1. Máquina de estados es v2.
+
+Paquetes, estructura compuesta, perfiles, tiempos y visión general de la interacción solo se dibujan en v2.
+
+Si la referencia dice que PlantUML aproxima el diagrama, la entrega lo dice. No se inventa un símbolo.

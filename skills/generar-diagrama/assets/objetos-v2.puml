@@ -1,0 +1,16 @@
+@startuml
+title Instantánea: el pedido 1042 ya tiene un pago autorizado
+
+object "pedido1042 : Pedido" as pedido {
+  numero = "1042"
+}
+object "linea1 : LineaPedido" as linea {
+  cantidad = 2
+}
+object "pago9 : Pago" as pago {
+  importe = 320.00
+}
+
+pedido --> linea
+pedido --> pago
+@enduml

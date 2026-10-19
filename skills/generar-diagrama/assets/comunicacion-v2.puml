@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+title Quién habla con quién al pagar, en orden numerado
+
+actor "Comprador" as comprador
+rectangle "Caja" as caja
+rectangle "Banco" as banco
+
+comprador --> caja : 1. pagar(importe)
+caja --> banco : 2. cobrar(importe)
+banco --> caja : 3. ok
+caja --> comprador : 4. recibo
+@enduml

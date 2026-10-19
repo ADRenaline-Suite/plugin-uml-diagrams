@@ -1,0 +1,16 @@
+@startuml
+title Qué pasa al pagar si el banco autoriza o rechaza
+
+actor Comprador
+participant Caja
+participant Banco
+
+Comprador -> Caja : pagar(importe)
+alt autorizado
+  Caja -> Banco : cobrar(importe)
+  Banco --> Caja : ok
+  Caja --> Comprador : recibo
+else rechazado
+  Caja --> Comprador : pago rechazado
+end
+@enduml

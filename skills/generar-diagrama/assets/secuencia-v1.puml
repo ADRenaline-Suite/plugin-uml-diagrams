@@ -1,0 +1,12 @@
+@startuml
+title Escenario feliz: el comprador paga y recibe el recibo
+
+actor Comprador
+participant Caja
+participant Banco
+
+Comprador -> Caja : pagar(importe)
+Caja -> Banco : cobrar(importe)
+Banco --> Caja : ok
+Caja --> Comprador : recibo
+@enduml

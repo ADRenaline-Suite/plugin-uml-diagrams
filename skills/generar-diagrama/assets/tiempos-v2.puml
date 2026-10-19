@@ -1,0 +1,17 @@
+@startuml
+title Cuándo cambian el pedido y el pago durante el cobro
+
+robust "Pedido" as pedido
+robust "Pago" as pago
+
+@0
+pedido is Borrador
+pago is Inexistente
+@100
+pedido is Confirmado
+@200
+pago is Autorizando
+@300
+pago is Autorizado
+pedido is Pagado
+@enduml

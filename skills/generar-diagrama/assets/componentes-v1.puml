@@ -1,0 +1,10 @@
+@startuml
+title De qué depende la caja para cobrar
+
+component Caja
+component PasarelaBanco
+component Pedido
+
+Caja ..> PasarelaBanco : <<use>>
+Caja ..> Pedido : <<use>>
+@enduml

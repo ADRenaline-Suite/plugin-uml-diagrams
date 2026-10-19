@@ -1,0 +1,11 @@
+@startuml
+title Dónde está desplegado cada componente
+
+node "Navegador" as nav {
+  component "Interfaz" as ui
+}
+node "Servidor" as srv {
+  component "Caja" as caja
+}
+nav --> srv : HTTPS
+@enduml

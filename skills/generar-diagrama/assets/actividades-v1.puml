@@ -1,0 +1,10 @@
+@startuml
+title Cómo se confirma y cobra un pedido
+
+(*) --> "Confirmar pedido"
+"Confirmar pedido" --> "¿Hay cupón?"
+"¿Hay cupón?" --> "Aplicar descuento" : sí
+"¿Hay cupón?" --> "Cobrar" : no
+"Aplicar descuento" --> "Cobrar"
+"Cobrar" --> (*)
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+hide empty description
+title Vida de un pedido
+
+[*] --> Borrador
+Borrador --> Confirmado : confirmar
+Confirmado --> Pagado : pagar [importe aceptado] / registrar pago
+Confirmado --> Cancelado : cancelar
+Pagado --> [*]
+Cancelado --> [*]
+@enduml
