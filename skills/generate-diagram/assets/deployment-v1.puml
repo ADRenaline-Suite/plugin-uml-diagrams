@@ -1,0 +1,11 @@
+@startuml
+title Where each component is deployed
+
+node "Browser" as nav {
+  component "UI" as ui
+}
+node "Server" as srv {
+  component "Checkout" as checkout
+}
+nav --> srv : HTTPS
+@enduml

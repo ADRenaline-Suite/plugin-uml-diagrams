@@ -1,0 +1,14 @@
+@startuml
+title In what order the purchase scenarios happen
+
+start
+:sd Select products;
+:sd Confirm order;
+if (Payment accepted?) then (yes)
+  :sd Charge;
+  :sd Issue receipt;
+else (no)
+  :sd Decline payment;
+endif
+stop
+@enduml

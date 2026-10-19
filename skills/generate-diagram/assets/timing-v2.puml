@@ -1,0 +1,17 @@
+@startuml
+title When the order and the payment change during the charge
+
+robust "Order" as order
+robust "Payment" as payment
+
+@0
+order is Draft
+payment is Absent
+@100
+order is Confirmed
+@200
+payment is Authorizing
+@300
+payment is Authorized
+order is Paid
+@enduml

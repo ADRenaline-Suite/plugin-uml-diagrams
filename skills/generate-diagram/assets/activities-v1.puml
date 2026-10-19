@@ -1,0 +1,10 @@
+@startuml
+title How an order is confirmed and charged
+
+(*) --> "Confirm order"
+"Confirm order" --> "Coupon?"
+"Coupon?" --> [yes] "Apply discount"
+"Coupon?" --> [no] "Charge"
+"Apply discount" --> "Charge"
+"Charge" --> (*)
+@enduml

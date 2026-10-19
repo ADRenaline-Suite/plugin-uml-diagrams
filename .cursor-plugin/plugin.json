@@ -1,9 +1,9 @@
 {
   "name": "adrenaline-uml-diagrams",
   "displayName": "UML Diagrams",
-  "description": "Genera los 9 diagramas de UML 1.5 y los 14 de UML 2.5.1, cada uno con su notación, sin mezclar versiones.",
+  "description": "Draws the 9 UML 1.5 diagrams and the 14 UML 2.5.1 diagrams, each in its own notation, without mixing versions.",
   "version": "0.1.0",
   "license": "MIT",
   "repository": "https://github.com/d-mente/adrenaline-uml-diagrams",
-  "keywords": ["uml", "diagramas", "plantuml", "secuencia", "clases"]
+  "keywords": ["uml", "diagrams", "plantuml", "sequence", "class"]
 }

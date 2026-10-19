@@ -1,11 +1,11 @@
 ---
 name: uml-components-v1
-description: ADRenaline. Diagrama de componentes UML 1.
+description: ADRenaline. UML 1 component diagram.
 ---
 
-Genera el diagrama de componentes UML 1.
+Draw the UML 1 component diagram.
 
-1. Lee y sigue `skills/generar-diagrama/SKILL.md`.
-2. La versión queda fijada por este comando (UML 1.5) y el tipo por esta página. No vuelvas a preguntar versión ni tipo.
-3. Lee `skills/generar-diagrama/references/componentes-v1.md` y adapta `skills/generar-diagrama/assets/componentes-v1.puml`.
-4. El texto del usuario es el contenido del dominio. Si falta ese contenido, pregúntalo.
+1. Read and follow `skills/generate-diagram/SKILL.md`.
+2. This command fixes the version (UML 1.5) and the diagram type. Do not ask for version or type again.
+3. Read `skills/generate-diagram/references/components-v1.md` and adapt `skills/generate-diagram/assets/components-v1.puml`.
+4. The user's text is the domain content. If that content is missing, ask for it.

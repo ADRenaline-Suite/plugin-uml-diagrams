@@ -1,0 +1,11 @@
+@startuml
+hide empty description
+title Life of an order
+
+[*] --> Draft
+Draft --> Confirmed : confirm
+Confirmed --> Paid : pay [amount accepted] / record payment
+Confirmed --> Cancelled : cancel
+Paid --> [*]
+Cancelled --> [*]
+@enduml

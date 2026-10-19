@@ -1,0 +1,14 @@
+@startuml
+title How an order is confirmed and charged
+
+|Buyer|
+start
+:Confirm order;
+|Checkout|
+if (Coupon?) then (yes)
+  :Apply discount;
+else (no)
+endif
+:Charge;
+stop
+@enduml

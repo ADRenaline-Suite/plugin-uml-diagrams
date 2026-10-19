@@ -1,0 +1,14 @@
+@startuml
+skinparam componentStyle uml2
+title Which interface the gateway offers and which one checkout requires
+
+interface Charge
+interface Authorization
+
+component Checkout
+component BankGateway
+
+Checkout - Charge
+BankGateway - Authorization
+Checkout ..> Authorization : <<use>>
+@enduml

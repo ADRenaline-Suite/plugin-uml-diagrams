@@ -1,0 +1,11 @@
+@startuml
+title Domain stereotype for what can be authorized
+
+package "Payments profile" <<profile>> {
+  class Authorizable <<stereotype>> {
+    +authorizationCode : String
+  }
+}
+class Class <<metaclass>>
+Authorizable -up-|> Class
+@enduml

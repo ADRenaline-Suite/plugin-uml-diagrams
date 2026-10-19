@@ -1,72 +1,76 @@
 # UML Diagrams (`adrenaline-uml-diagrams`)
 
-Genera diagramas UML 1.5 y UML 2.5.1 para cualquier rol. Cada pedido usa la notación de la versión pedida.
+Draws UML 1.5 and UML 2.5.1 diagrams for any role. Each request uses the notation of the version that was asked for.
 
-La documentación de cada diagrama está en `skills/generar-diagrama/references/`. Cada página trae el gráfico fácil de leer, la notación, la plantilla, un ejemplo PlantUML y un prompt de ejemplo. Las plantillas viven en `skills/generar-diagrama/assets/`.
+Each diagram is documented in `skills/generate-diagram/references/`. Each page has the easy-to-read diagram, the notation, the template, a PlantUML example, and an example prompt. The templates live in `skills/generate-diagram/assets/`.
 
-## Para quién
+## Who it is for
 
-Para quien necesite una vista UML dentro de una conversación con el agente: arquitectura, casos de uso, pruebas o interfaz. Esos roles piden este plugin. No copian sus skills.
+Anyone who needs a UML view inside a conversation with the agent: architecture, use cases, testing, or interface. Those roles ask this plugin for the drawing. They do not copy its skills.
 
-## Qué incluye
+## What it includes
 
-Portable, para cualquier agente que siga [Agent Skills](https://agentskills.io/specification):
+Portable, for any agent that follows [Agent Skills](https://agentskills.io/specification):
 
-- Skill `generar-diagrama`, con una referencia y una plantilla PlantUML por cada diagrama del catálogo (9 de UML 1 y 14 de UML 2).
+- Skill `generate-diagram`, with one reference and one PlantUML template for each diagram in the catalog (9 from UML 1 and 14 from UML 2).
 
-Solo Cursor:
+Cursor only:
 
-- 23 commands, uno por diagrama. En el chat, `/uml-sequence-v2` o el nombre de otro command.
-- Rule `notacion-uml`, que impide mezclar las dos notaciones.
+- 23 commands, one per diagram. In chat, `/uml-sequence-v2` or the name of another command.
+- Rule `uml-notation`, which stops the two notations from being mixed.
 
-## Instalación
+## Installation
 
-En Cursor, instala el plugin desde este repositorio en Customize.
+In Cursor, install the plugin from this repository in Customize.
 
-En otro agente, instala la skill con el mecanismo de ese agente. Por ejemplo:
+On another agent, install the skill with that agent's mechanism. For example:
 
 ```text
 gh skill install d-mente/adrenaline-uml-diagrams
 ```
 
-## Configuración
+## Configuration
 
-No usa variables ni servicios. El render es PlantUML.
+It uses no variables and no services. The render is PlantUML.
 
-## Cómo se pide
+## How to ask
 
-En el chat, `/uml-sequence-v2` o el nombre de otro command. También basta pedir el diagrama en lenguaje natural: el skill elige la referencia.
+In chat, `/uml-sequence-v2` or the name of another command. Asking for the diagram in plain language is enough: the skill chooses the reference.
 
-PlantUML es el render. Comunicación, colaboración, estructura compuesta, perfiles y visión general de la interacción no tienen tipo nativo en PlantUML: la referencia dice la aproximación y la entrega también.
+PlantUML is the render. Communication, collaboration, composite structure, profiles, and interaction overview have no native PlantUML type: the reference states the approximation, and the delivery states it too.
 
-## Catálogo
+Each reference includes the rendered SVG next to its source. This is the UML 2 class diagram:
 
-| Diagrama | Acción | Documentación |
+![UML 2 class diagram](skills/generate-diagram/assets/classes-v2.svg)
+
+## Catalog
+
+| Diagram | Action | Documentation |
 | --- | --- | --- |
-| Diagrama de clases UML 1 | `/uml-classes-v1` | [referencia](skills/generar-diagrama/references/clases-v1.md) |
-| Diagrama de clases UML 2 | `/uml-classes-v2` | [referencia](skills/generar-diagrama/references/clases-v2.md) |
-| Diagrama de objetos UML 1 | `/uml-objects-v1` | [referencia](skills/generar-diagrama/references/objetos-v1.md) |
-| Diagrama de objetos UML 2 | `/uml-objects-v2` | [referencia](skills/generar-diagrama/references/objetos-v2.md) |
-| Diagrama de casos de uso UML 1 | `/uml-use-cases-v1` | [referencia](skills/generar-diagrama/references/casos-de-uso-v1.md) |
-| Diagrama de casos de uso UML 2 | `/uml-use-cases-v2` | [referencia](skills/generar-diagrama/references/casos-de-uso-v2.md) |
-| Diagrama de secuencia UML 1 | `/uml-sequence-v1` | [referencia](skills/generar-diagrama/references/secuencia-v1.md) |
-| Diagrama de secuencia UML 2 | `/uml-sequence-v2` | [referencia](skills/generar-diagrama/references/secuencia-v2.md) |
-| Diagrama de colaboración UML 1 | `/uml-collaboration-v1` | [referencia](skills/generar-diagrama/references/colaboracion-v1.md) |
-| Diagrama de estados UML 1 (statechart) | `/uml-states-v1` | [referencia](skills/generar-diagrama/references/estados-v1.md) |
-| Diagrama de actividades UML 1 (activity graph) | `/uml-activities-v1` | [referencia](skills/generar-diagrama/references/actividades-v1.md) |
-| Diagrama de componentes UML 1 | `/uml-components-v1` | [referencia](skills/generar-diagrama/references/componentes-v1.md) |
-| Diagrama de despliegue UML 1 | `/uml-deployment-v1` | [referencia](skills/generar-diagrama/references/despliegue-v1.md) |
-| Diagrama de paquetes UML 2 | `/uml-packages-v2` | [referencia](skills/generar-diagrama/references/paquetes-v2.md) |
-| Diagrama de estructura compuesta UML 2 | `/uml-composite-v2` | [referencia](skills/generar-diagrama/references/estructura-compuesta-v2.md) |
-| Diagrama de componentes UML 2 | `/uml-components-v2` | [referencia](skills/generar-diagrama/references/componentes-v2.md) |
-| Diagrama de despliegue UML 2 | `/uml-deployment-v2` | [referencia](skills/generar-diagrama/references/despliegue-v2.md) |
-| Diagrama de perfiles UML 2 | `/uml-profiles-v2` | [referencia](skills/generar-diagrama/references/perfiles-v2.md) |
-| Diagrama de actividades UML 2 | `/uml-activities-v2` | [referencia](skills/generar-diagrama/references/actividades-v2.md) |
-| Diagrama de máquina de estados UML 2 | `/uml-state-machine-v2` | [referencia](skills/generar-diagrama/references/maquina-de-estados-v2.md) |
-| Diagrama de comunicación UML 2 | `/uml-communication-v2` | [referencia](skills/generar-diagrama/references/comunicacion-v2.md) |
-| Diagrama de tiempos UML 2 | `/uml-timing-v2` | [referencia](skills/generar-diagrama/references/tiempos-v2.md) |
-| Diagrama de visión general de la interacción UML 2 | `/uml-interaction-overview-v2` | [referencia](skills/generar-diagrama/references/vision-general-interaccion-v2.md) |
+| UML 1 class diagram | `/uml-classes-v1` | [reference](skills/generate-diagram/references/classes-v1.md) |
+| UML 2 class diagram | `/uml-classes-v2` | [reference](skills/generate-diagram/references/classes-v2.md) |
+| UML 1 object diagram | `/uml-objects-v1` | [reference](skills/generate-diagram/references/objects-v1.md) |
+| UML 2 object diagram | `/uml-objects-v2` | [reference](skills/generate-diagram/references/objects-v2.md) |
+| UML 1 use case diagram | `/uml-use-cases-v1` | [reference](skills/generate-diagram/references/use-cases-v1.md) |
+| UML 2 use case diagram | `/uml-use-cases-v2` | [reference](skills/generate-diagram/references/use-cases-v2.md) |
+| UML 1 sequence diagram | `/uml-sequence-v1` | [reference](skills/generate-diagram/references/sequence-v1.md) |
+| UML 2 sequence diagram | `/uml-sequence-v2` | [reference](skills/generate-diagram/references/sequence-v2.md) |
+| UML 1 collaboration diagram | `/uml-collaboration-v1` | [reference](skills/generate-diagram/references/collaboration-v1.md) |
+| UML 1 statechart diagram | `/uml-states-v1` | [reference](skills/generate-diagram/references/states-v1.md) |
+| UML 1 activity graph | `/uml-activities-v1` | [reference](skills/generate-diagram/references/activities-v1.md) |
+| UML 1 component diagram | `/uml-components-v1` | [reference](skills/generate-diagram/references/components-v1.md) |
+| UML 1 deployment diagram | `/uml-deployment-v1` | [reference](skills/generate-diagram/references/deployment-v1.md) |
+| UML 2 package diagram | `/uml-packages-v2` | [reference](skills/generate-diagram/references/packages-v2.md) |
+| UML 2 composite structure diagram | `/uml-composite-v2` | [reference](skills/generate-diagram/references/composite-v2.md) |
+| UML 2 component diagram | `/uml-components-v2` | [reference](skills/generate-diagram/references/components-v2.md) |
+| UML 2 deployment diagram | `/uml-deployment-v2` | [reference](skills/generate-diagram/references/deployment-v2.md) |
+| UML 2 profile diagram | `/uml-profiles-v2` | [reference](skills/generate-diagram/references/profiles-v2.md) |
+| UML 2 activity diagram | `/uml-activities-v2` | [reference](skills/generate-diagram/references/activities-v2.md) |
+| UML 2 state machine diagram | `/uml-state-machine-v2` | [reference](skills/generate-diagram/references/state-machine-v2.md) |
+| UML 2 communication diagram | `/uml-communication-v2` | [reference](skills/generate-diagram/references/communication-v2.md) |
+| UML 2 timing diagram | `/uml-timing-v2` | [reference](skills/generate-diagram/references/timing-v2.md) |
+| UML 2 interaction overview diagram | `/uml-interaction-overview-v2` | [reference](skills/generate-diagram/references/interaction-overview-v2.md) |
 
-## Licencia
+## License
 
-MIT. Ver [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

@@ -1,0 +1,18 @@
+---
+description: Stops UML 1 and UML 2 notation from being mixed when a diagram is drawn
+alwaysApply: true
+---
+
+# UML notation
+
+Before drawing, read `skills/generate-diagram/SKILL.md` and only one reference: the one for the requested type and version.
+
+A v1 request uses the `*-v1` reference. A v2 request uses the `*-v2` reference.
+
+Sequence v1 has no combined fragments (`alt`, `opt`, `loop`, `par`). Activity v1 is an activity graph, with no token flow and no pins. Component v1 has no ports and no connectors.
+
+Collaboration is the v1 name. Communication is the v2 name. States (statechart) is v1. State machine is v2.
+
+Packages, composite structure, profiles, timing, and interaction overview are drawn only in v2.
+
+If the reference says PlantUML approximates the diagram, the delivery says so. Do not invent a symbol.

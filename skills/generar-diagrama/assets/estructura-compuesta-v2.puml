@@ -1,9 +1,0 @@
-@startuml
-title Cableado interno de un Pedido
-
-rectangle "Pedido" {
-  rectangle "lineas : LineaPedido" as lineas
-  rectangle "pago : Pago" as pago
-  lineas --> pago : notificar total
-}
-@enduml

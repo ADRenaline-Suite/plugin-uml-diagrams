@@ -1,0 +1,16 @@
+@startuml
+title Snapshot: order 1042 already has an authorized payment
+
+object "order1042 : Order" as order {
+  number = "1042"
+}
+object "line1 : OrderLine" as line {
+  quantity = 2
+}
+object "payment9 : Payment" as payment {
+  amount = 320.00
+}
+
+order --> line
+order --> payment
+@enduml

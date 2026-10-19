@@ -1,0 +1,12 @@
+@startuml
+title Happy path: the buyer pays and receives the receipt
+
+actor Buyer
+participant Checkout
+participant Bank
+
+Buyer -> Checkout : pay(amount)
+Checkout -> Bank : charge(amount)
+Bank --> Checkout : ok
+Checkout --> Buyer : receipt
+@enduml

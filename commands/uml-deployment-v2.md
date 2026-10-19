@@ -1,11 +1,11 @@
 ---
 name: uml-deployment-v2
-description: ADRenaline. Diagrama de despliegue UML 2.
+description: ADRenaline. UML 2 deployment diagram.
 ---
 
-Genera el diagrama de despliegue UML 2.
+Draw the UML 2 deployment diagram.
 
-1. Lee y sigue `skills/generar-diagrama/SKILL.md`.
-2. La versión queda fijada por este comando (UML 2.5.1) y el tipo por esta página. No vuelvas a preguntar versión ni tipo.
-3. Lee `skills/generar-diagrama/references/despliegue-v2.md` y adapta `skills/generar-diagrama/assets/despliegue-v2.puml`.
-4. El texto del usuario es el contenido del dominio. Si falta ese contenido, pregúntalo.
+1. Read and follow `skills/generate-diagram/SKILL.md`.
+2. This command fixes the version (UML 2.5.1) and the diagram type. Do not ask for version or type again.
+3. Read `skills/generate-diagram/references/deployment-v2.md` and adapt `skills/generate-diagram/assets/deployment-v2.puml`.
+4. The user's text is the domain content. If that content is missing, ask for it.

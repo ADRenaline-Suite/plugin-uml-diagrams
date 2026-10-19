@@ -1,5 +1,5 @@
 # adrenaline-uml-diagrams
 
-Genera diagramas UML 1.5 y UML 2.5.1. El procedimiento está en `skills/generar-diagrama/SKILL.md`. Cada tipo y versión tiene su manual en `skills/generar-diagrama/references/`.
+Draws UML 1.5 and UML 2.5.1 diagrams. The procedure is in `skills/generate-diagram/SKILL.md`. Each type and version has its manual in `skills/generate-diagram/references/`.
 
-La notación de las dos versiones no se mezcla. Si PlantUML no dibuja el tipo de forma nativa, el manual lo dice y la entrega también.
+The two versions of the notation are not mixed. If PlantUML does not draw the type natively, the manual says so and the delivery does too.

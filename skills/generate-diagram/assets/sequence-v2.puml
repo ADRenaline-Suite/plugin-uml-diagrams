@@ -1,0 +1,16 @@
+@startuml
+title What happens when paying if the bank authorizes or declines
+
+actor Buyer
+participant Checkout
+participant Bank
+
+Buyer -> Checkout : pay(amount)
+alt authorized
+  Checkout -> Bank : charge(amount)
+  Bank --> Checkout : ok
+  Checkout --> Buyer : receipt
+else declined
+  Checkout --> Buyer : payment declined
+end
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+title Where the store runs in production
+
+node "Browser" as nav
+node "Store server" as srv {
+  artifact "store.jar" as app
+}
+node "Gateway" as gateway {
+  artifact "bank-connector" as connector
+}
+nav --> srv : HTTPS
+srv --> gateway : HTTPS
+@enduml

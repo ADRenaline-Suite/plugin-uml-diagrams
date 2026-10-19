@@ -1,0 +1,22 @@
+@startuml
+skinparam shadowing false
+hide empty members
+title What data an order has and how it relates to its payment
+
+class Order {
+  +number : String
+  +total() : Decimal
+  +confirm()
+}
+class OrderLine {
+  +quantity : Integer
+  +subtotal() : Decimal
+}
+class Payment {
+  +amount : Decimal
+  +authorize()
+}
+
+Order "1" *-- "1..*" OrderLine : contains
+Order "1" --> "0..1" Payment : settled with
+@enduml

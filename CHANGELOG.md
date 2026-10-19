@@ -4,6 +4,6 @@
 
 ### Added
 
-- Skill `generar-diagrama` para UML 1.5 y UML 2.5.1.
-- Una referencia, una plantilla PlantUML y un command por cada diagrama del catálogo.
-- Rule `notacion-uml` para no mezclar versiones.
+- Skill `generate-diagram` for UML 1.5 and UML 2.5.1.
+- One reference, one PlantUML template, and one command for each diagram in the catalog.
+- Rule `uml-notation`, so the two versions are not mixed.

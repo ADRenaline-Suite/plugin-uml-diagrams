@@ -1,11 +1,11 @@
 ---
 name: uml-sequence-v2
-description: ADRenaline. Diagrama de secuencia UML 2.
+description: ADRenaline. UML 2 sequence diagram.
 ---
 
-Genera el diagrama de secuencia UML 2.
+Draw the UML 2 sequence diagram.
 
-1. Lee y sigue `skills/generar-diagrama/SKILL.md`.
-2. La versión queda fijada por este comando (UML 2.5.1) y el tipo por esta página. No vuelvas a preguntar versión ni tipo.
-3. Lee `skills/generar-diagrama/references/secuencia-v2.md` y adapta `skills/generar-diagrama/assets/secuencia-v2.puml`.
-4. El texto del usuario es el contenido del dominio. Si falta ese contenido, pregúntalo.
+1. Read and follow `skills/generate-diagram/SKILL.md`.
+2. This command fixes the version (UML 2.5.1) and the diagram type. Do not ask for version or type again.
+3. Read `skills/generate-diagram/references/sequence-v2.md` and adapt `skills/generate-diagram/assets/sequence-v2.puml`.
+4. The user's text is the domain content. If that content is missing, ask for it.

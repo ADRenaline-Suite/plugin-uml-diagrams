@@ -1,0 +1,9 @@
+@startuml
+title Internal wiring of an Order
+
+rectangle "Order" {
+  rectangle "lines : OrderLine" as lines
+  rectangle "payment : Payment" as payment
+  lines --> payment : notify total
+}
+@enduml

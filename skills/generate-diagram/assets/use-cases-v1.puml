@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+title What the buyer can do in the store
+
+actor Buyer
+rectangle "Store" {
+  usecase "Pay order" as pay
+  usecase "Choose payment method" as method
+  usecase "Apply coupon" as coupon
+  pay .> method : <<include>>
+  pay .> coupon : <<extend>>
+}
+Buyer --> pay
+@enduml

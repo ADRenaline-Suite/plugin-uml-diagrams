@@ -1,0 +1,10 @@
+@startuml
+title What checkout depends on in order to charge
+
+component Checkout
+component BankGateway
+component Orders
+
+Checkout ..> BankGateway : <<use>>
+Checkout ..> Orders : <<use>>
+@enduml

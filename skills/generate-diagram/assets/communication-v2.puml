@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+title Who talks to whom when paying, in numbered order
+
+actor "Buyer" as buyer
+rectangle "Checkout" as checkout
+rectangle "Bank" as bank
+
+buyer --> checkout : 1. pay(amount)
+checkout --> bank : 2. charge(amount)
+bank --> checkout : 3. ok
+checkout --> buyer : 4. receipt
+@enduml
