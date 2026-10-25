@@ -8,6 +8,8 @@ What life an object goes through, and which event, guard, and effect change its 
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 One classifier, three to six states, a transition `event [guard] / effect`. Regions only if two parts of the same object evolve at once. History `[H]` only if the request needs to remember the substate.
 
 ## Notation for this version
@@ -43,6 +45,22 @@ Cancelled --> [*]
 
 ![state-machine-v2](../assets/state-machine-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw the UML 2 state machine of an order, from draft to confirmed, and from there to paid or cancelled. The move to paid requires the amount to be accepted and records the payment.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-state-machine-v2 The life of an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-state-machine-v2 An order, from draft to confirmed, and from there to paid or cancelled. The move to paid requires the amount to be accepted and records the payment.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw the UML 2 state machine of an order, from draft to confirmed, and from there to paid or cancelled. The move to paid requires the amount to be accepted and records the payment.
+```

@@ -8,6 +8,8 @@ What messages are exchanged over time, including the branches that actually matt
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 An actor on the left, two or three lifelines, read top to bottom. At most one alt, opt, or loop fragment. The title names the scenario.
 
 ## Notation for this version
@@ -48,6 +50,22 @@ end
 
 ![sequence-v2](../assets/sequence-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 2 sequence diagram of paying an order, with one alt: if the bank authorizes, checkout returns the receipt; if it declines, checkout tells the buyer.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-sequence-v2 Paying an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-sequence-v2 Paying an order, with one alt: if the bank authorizes, checkout returns the receipt; if it declines, checkout tells the buyer.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 2 sequence diagram of paying an order, with one alt: if the bank authorizes, checkout returns the receipt; if it declines, checkout tells the buyer.
+```

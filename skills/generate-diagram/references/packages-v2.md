@@ -8,6 +8,8 @@ How the model is grouped, and which package depends on which.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Folders and dashed dependencies toward the more stable package. No cycles. «import» or «merge» only when that is the question.
 
 ## Notation for this version
@@ -41,6 +43,22 @@ sales ..> catalog : <<import>>
 
 ![packages-v2](../assets/packages-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 2 package diagram: sales imports payments and catalog, and there are no cycles.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-packages-v2 Sales, payments, and catalog.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-packages-v2 Sales imports payments and catalog, and there are no cycles.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 2 package diagram: sales imports payments and catalog, and there are no cycles.
+```

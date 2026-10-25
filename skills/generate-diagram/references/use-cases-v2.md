@@ -8,6 +8,8 @@ Who uses the system and for which goals.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Actors outside the subject. Three to six ellipses. «include» for mandatory reuse and «extend» for an optional variation. No flow steps inside the ellipse.
 
 ## Notation for this version
@@ -46,6 +48,22 @@ Buyer --> pay
 
 ![use-cases-v2](../assets/use-cases-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 2 use case diagram of the store: the buyer pays an order, always chooses the payment method, and may extend the payment with a coupon.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-use-cases-v2 A buyer paying an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-use-cases-v2 The buyer pays an order, always chooses the payment method, and may extend the payment with a coupon.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 2 use case diagram of the store: the buyer pays an order, always chooses the payment method, and may extend the payment with a coupon.
+```

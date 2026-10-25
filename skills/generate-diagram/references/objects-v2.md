@@ -8,6 +8,8 @@ What concrete values the instances have at one instant.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 A few underlined instances, slots, and links. One moment.
 
 ## Notation for this version
@@ -48,6 +50,22 @@ order --> payment
 
 ![objects-v2](../assets/objects-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 2 object diagram of the instant when order 1042 is linked to its line and to a payment of 320.00.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-objects-v2 One paid order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-objects-v2 The instant when order 1042 is linked to its line and to a payment of 320.00.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 2 object diagram of the instant when order 1042 is linked to its line and to a payment of 320.00.
+```

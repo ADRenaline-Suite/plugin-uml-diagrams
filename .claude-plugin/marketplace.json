@@ -1,0 +1,16 @@
+{
+  "name": "adrenaline-uml-diagrams",
+  "owner": {
+    "name": "d-mente"
+  },
+  "metadata": {
+    "description": "Marketplace with the UML Diagrams plugin."
+  },
+  "plugins": [
+    {
+      "name": "adrenaline-uml-diagrams",
+      "source": "./",
+      "description": "Draws the 9 UML 1.5 diagrams and the 14 UML 2.5.1 diagrams, each in its own notation, without mixing versions."
+    }
+  ]
+}

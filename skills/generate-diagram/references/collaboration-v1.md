@@ -8,6 +8,8 @@ Who is connected to whom, and in what order the messages are sent.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Three to five nodes laid out horizontally, with messages numbered 1, 2, 3 on the links. The number is the order. Choose it when the network of links matters more than the time column.
 
 ## Notation for this version
@@ -45,6 +47,22 @@ checkout --> buyer : 4. receipt
 
 ![collaboration-v1](../assets/collaboration-v1.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 1 collaboration diagram of the payment: buyer, checkout, and bank, with the numbered messages of the happy path.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-collaboration-v1 Paying an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-collaboration-v1 Buyer, checkout, and bank, with the numbered messages of the happy path.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 1 collaboration diagram of the payment: buyer, checkout, and bank, with the numbered messages of the happy path.
+```

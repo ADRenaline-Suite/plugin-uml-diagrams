@@ -8,6 +8,8 @@ On which nodes each component sits.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Two or three nodes, the components inside the node where they run, and a communication line between nodes. One environment, the one named in the title.
 
 ## Notation for this version
@@ -42,6 +44,22 @@ nav --> srv : HTTPS
 
 ![deployment-v1](../assets/deployment-v1.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 1 deployment diagram of production: the UI in the browser and checkout on the server, joined by HTTPS. No UML 2 artifacts.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-deployment-v1 The store in production.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-deployment-v1 The UI in the browser and checkout on the server, joined by HTTPS. No UML 2 artifacts.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 1 deployment diagram of production: the UI in the browser and checkout on the server, joined by HTTPS. No UML 2 artifacts.
+```

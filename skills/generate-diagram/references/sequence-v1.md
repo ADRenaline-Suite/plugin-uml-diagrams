@@ -8,6 +8,8 @@ What messages are exchanged in a single scenario, top to bottom.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 An actor on the left and two or three participants. One scenario, the happy path or one alternative in a separate drawing. Synchronous messages with a dashed return.
 
 ## Notation for this version
@@ -44,6 +46,22 @@ Checkout --> Buyer : receipt
 
 ![sequence-v1](../assets/sequence-v1.svg)
 
-## Example prompt
+## Examples
 
-> Draw the UML 1 sequence diagram of the happy path for paying: the buyer asks checkout to charge, checkout asks the bank, and if the bank answers ok, checkout returns the receipt. No alt fragments.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-sequence-v1 Paying an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-sequence-v1 The buyer asks checkout to charge, checkout asks the bank, and if the bank answers ok, checkout returns the receipt. No alt fragments.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw the UML 1 sequence diagram of the happy path for paying: the buyer asks checkout to charge, checkout asks the bank, and if the bank answers ok, checkout returns the receipt. No alt fragments.
+```

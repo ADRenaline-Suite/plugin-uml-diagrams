@@ -8,6 +8,8 @@ What concepts exist and how they relate, in UML 1 class notation.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Three to six boxes with three compartments. Associations with multiplicity and a verb as the name. At most one generalization. Aggregation or composition only when the whole and the part are the question.
 
 ## Notation for this version
@@ -54,6 +56,22 @@ Order "1" --> "0..1" Payment : settled with
 
 ![classes-v1](../assets/classes-v1.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 1 class diagram of an order: an order contains one or more lines and is settled with an optional payment. Show only number, total, quantity, subtotal, and amount, and the operations confirm, subtotal, and authorize.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-classes-v1 A sales cart.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-classes-v1 An order contains one or more lines and is settled with an optional payment. Show only number, total, quantity, subtotal, and amount, and the operations confirm, subtotal, and authorize.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 1 class diagram of an order: an order contains one or more lines and is settled with an optional payment. Show only number, total, quantity, subtotal, and amount, and the operations confirm, subtotal, and authorize.
+```

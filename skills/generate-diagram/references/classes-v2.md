@@ -8,6 +8,8 @@ What concepts exist and how they relate.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Three to six boxes with three compartments. Associations with multiplicity and a verb. At most one generalization. A filled diamond only if the part does not survive without the whole.
 
 ## Notation for this version
@@ -54,6 +56,22 @@ Order "1" --> "0..1" Payment : settled with
 
 ![classes-v2](../assets/classes-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 2 class diagram of an order: composition with order lines and an optional association with the payment. Only the attributes and operations needed to read the total and authorize the payment.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-classes-v2 A sales cart.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-classes-v2 An order: composition with order lines and an optional association with the payment. Only the attributes and operations needed to read the total and authorize the payment.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 2 class diagram of an order: composition with order lines and an optional association with the payment. Only the attributes and operations needed to read the total and authorize the payment.
+```

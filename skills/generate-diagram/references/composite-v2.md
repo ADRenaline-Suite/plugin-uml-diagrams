@@ -8,6 +8,8 @@ What parts a classifier has inside, and how they are connected.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 One outer classifier and two to four parts with a role `: Type`. Connectors between parts. Ports only on the boundary the outside shows.
 
 ## Notation for this version
@@ -40,6 +42,22 @@ rectangle "Order" {
 
 ![composite-v2](../assets/composite-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw the UML 2 composite structure of Order: inside it has the parts lines and payment, and the lines notify the total to the payment.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-composite-v2 The inside of an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-composite-v2 Order has the parts lines and payment, and the lines notify the total to the payment.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw the UML 2 composite structure of Order: inside it has the parts lines and payment, and the lines notify the total to the payment.
+```

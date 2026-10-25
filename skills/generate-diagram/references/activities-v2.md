@@ -8,6 +8,8 @@ How a procedure moves forward, who does it, and where it decides.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Swimlanes with the owner, an initial node, actions, one decision with both exits labeled, and a final node. A fork/join only when there is real parallel work.
 
 ## Notation for this version
@@ -46,6 +48,22 @@ stop
 
 ![activities-v2](../assets/activities-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 2 activity diagram with swimlanes: the buyer confirms the order and checkout, if there is a coupon, applies the discount, and in both cases charges.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-activities-v2 Confirm and charge an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-activities-v2 The buyer confirms the order and checkout, if there is a coupon, applies the discount, and in both cases charges.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 2 activity diagram with swimlanes: the buyer confirms the order and checkout, if there is a coupon, applies the discount, and in both cases charges.
+```

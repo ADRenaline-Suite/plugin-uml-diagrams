@@ -1,0 +1,14 @@
+---
+description: Folder where this plugin writes its diagrams in the user's project
+alwaysApply: true
+---
+
+# Output folder
+
+Every file this plugin creates goes inside `uml-diagrams/` at the project root.
+
+If `.cursor/adrenaline.json` exists and `outputDirs["adrenaline-uml-diagrams"]` holds a path, use that path instead. The path is relative to the project root, with no `..` and not absolute. If it is not valid, use `uml-diagrams/` and say so.
+
+Create the folder if it is missing. Do not write diagrams anywhere else.
+
+Write the diagram title and the labels in the language of the request. If none is named, use the language the request is written in. Keep names the person already used. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`.

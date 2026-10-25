@@ -8,6 +8,8 @@ Who is linked to whom, and in what order the messages travel.
 
 ## Diagram that is easy to read
 
+A guide for choosing what to draw when the user leaves it open. It never removes what the user asked for or approved (see Fidelity in the skill).
+
 Three to five lifelines laid out horizontally, links, and numbered messages. Prefer it to sequence when the question is the network, not the time column.
 
 ## Notation for this version
@@ -45,6 +47,22 @@ checkout --> buyer : 4. receipt
 
 ![communication-v2](../assets/communication-v2.svg)
 
-## Example prompt
+## Examples
 
-> Draw a UML 2 communication diagram of the happy-path payment among buyer, checkout, and bank, with numbered messages.
+Short command. The command already fixes the diagram, so a few words of domain are enough. The agent fills in what you leave open.
+
+```text
+/uml-communication-v2 Paying an order.
+```
+
+Command. It fixes the diagram. The rest is the domain.
+
+```text
+/uml-communication-v2 Happy-path payment among buyer, checkout, and bank, with numbered messages.
+```
+
+Prompt. The sentence names the diagram, and the skill chooses this reference.
+
+```text
+Draw a UML 2 communication diagram of the happy-path payment among buyer, checkout, and bank, with numbered messages.
+```

@@ -5,7 +5,7 @@ alwaysApply: true
 
 # UML notation
 
-Before drawing, read `skills/generate-diagram/SKILL.md` and only one reference: the one for the requested type and version.
+Before drawing, read `skills/generate-diagram/SKILL.md` and only one reference: the one for the requested type and version. The Mermaid file of classes, sequence, and states also follows `skills/generate-diagram/references/mermaid.md`, with the same version rules.
 
 A v1 request uses the `*-v1` reference. A v2 request uses the `*-v2` reference.
 
