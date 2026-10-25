@@ -1,4 +1,4 @@
-# UML Diagrams (`adrenaline-uml-diagrams`)
+# UML Diagrams (`plugin-uml-diagrams`)
 
 Draws UML 1.5 and UML 2.5.1 diagrams for any role. Each request uses the notation of the version that was asked for.
 
@@ -16,7 +16,7 @@ Portable, for any agent that follows [Agent Skills](https://agentskills.io/speci
 
 Cursor and Claude Code:
 
-- 24 commands: `/uml-help` (one-line catalog of skills, rules, and commands) and one command per diagram. In Cursor, `/uml-help` or `/uml-sequence-v2`. In Claude Code, `/adrenaline-uml-diagrams:uml-help`.
+- 24 commands: `/uml-help` (one-line catalog of skills, rules, and commands) and one command per diagram. In Cursor, `/uml-help` or `/uml-sequence-v2`. In Claude Code, `/plugin-uml-diagrams:uml-help`.
 
 Cursor only:
 
@@ -30,8 +30,8 @@ In Cursor, install the plugin from this repository in Customize.
 In Claude Code, this repository is also a marketplace:
 
 ```text
-claude plugin marketplace add d-mente/adrenaline-uml-diagrams
-claude plugin install adrenaline-uml-diagrams@adrenaline-uml-diagrams
+claude plugin marketplace add ADRenaline-Suite/plugin-uml-diagrams
+claude plugin install plugin-uml-diagrams@plugin-uml-diagrams
 ```
 
 To try a local copy without installing it, start Claude Code with `claude --plugin-dir <path to this repository>`.
@@ -39,7 +39,7 @@ To try a local copy without installing it, start Claude Code with `claude --plug
 On another agent, install the skill with that agent's mechanism. For example:
 
 ```text
-gh skill install d-mente/adrenaline-uml-diagrams
+gh skill install ADRenaline-Suite/plugin-uml-diagrams
 ```
 
 ## Configuration
@@ -55,7 +55,7 @@ To use another folder, add `.cursor/adrenaline.json` to the project:
 ```json
 {
   "outputDirs": {
-    "adrenaline-uml-diagrams": "docs/uml"
+    "plugin-uml-diagrams": "docs/uml"
   }
 }
 ```
@@ -64,7 +64,7 @@ The path is relative to the project root and cannot contain `..`. Claude Code an
 
 ## How to ask
 
-In Cursor, `/uml-sequence-v2` or the name of another command. In Claude Code, the same name with the plugin prefix: `/adrenaline-uml-diagrams:uml-sequence-v2`. Asking for the diagram in plain language is enough: the skill chooses the reference.
+In Cursor, `/uml-sequence-v2` or the name of another command. In Claude Code, the same name with the plugin prefix: `/plugin-uml-diagrams:uml-sequence-v2`. Asking for the diagram in plain language is enough: the skill chooses the reference.
 
 To save a diagram the agent already showed in the conversation, ask to save it. It is saved as it was shown, with the same participants and branches. Each reference's readability guide only applies when you leave the content open; if the diagram goes beyond it, the delivery says so and suggests a split, but does not cut anything unless you ask.
 

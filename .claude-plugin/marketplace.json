@@ -1,14 +1,14 @@
 {
-  "name": "adrenaline-uml-diagrams",
+  "name": "plugin-uml-diagrams",
   "owner": {
-    "name": "d-mente"
+    "name": "ADRenaline Suite"
   },
   "metadata": {
     "description": "Marketplace with the UML Diagrams plugin."
   },
   "plugins": [
     {
-      "name": "adrenaline-uml-diagrams",
+      "name": "plugin-uml-diagrams",
       "source": "./",
       "description": "Draws the 9 UML 1.5 diagrams and the 14 UML 2.5.1 diagrams, each in its own notation, without mixing versions."
     }

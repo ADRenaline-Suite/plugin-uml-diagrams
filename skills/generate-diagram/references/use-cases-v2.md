@@ -17,7 +17,7 @@ Actors outside the subject. Three to six ellipses. «include» for mandatory reu
 - Actor, use case, and subject (the boundary).
 - Association, «include», «extend», and generalization.
 - The `uc` frame heading belongs to UML 2. PlantUML does not draw that frame; the title takes its place and the delivery says so.
-- The use-case text belongs to adrenaline-project-manager.
+- The use-case text belongs to plugin-project-manager.
 
 ## Render
 

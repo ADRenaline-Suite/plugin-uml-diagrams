@@ -5,7 +5,7 @@ description: Draws a UML 1 or UML 2 diagram from the catalog, in the notation of
 
 # Generate a UML diagram
 
-Draw one view. Architecture evaluation stays in `adrenaline-software-architect`. The use-case text stays in `adrenaline-project-manager`.
+Draw one view. Architecture evaluation stays in `plugin-software-architect`. The use-case text stays in `plugin-project-manager`.
 
 Source for v2: OMG UML 2.5.1, Annex A (14 diagrams). Source for v1: OMG UML 1.4 and 1.5 (9 diagrams). There is no fifteenth diagram. Render: PlantUML. If the reference says PlantUML only approximates the diagram, the delivery says so.
 
@@ -67,7 +67,7 @@ Then follow Delivery.
 
 ## Delivery
 
-Save the PlantUML source as `<folder>/<NNN>-<id>-<topic>.puml` and the rendered image next to it as `<folder>/<NNN>-<id>-<topic>.svg`. `<folder>` is `uml-diagrams/` at the project root, unless `.cursor/adrenaline.json` sets `outputDirs["adrenaline-uml-diagrams"]` to a relative path without `..`. `<topic>` is the title in kebab-case. `<NNN>` is a monotonic integer in that folder (001, 002, …); never reuse a number for a different diagram. Create the folder if it is missing.
+Save the PlantUML source as `<folder>/<NNN>-<id>-<topic>.puml` and the rendered image next to it as `<folder>/<NNN>-<id>-<topic>.svg`. `<folder>` is `uml-diagrams/` at the project root, unless `.cursor/adrenaline.json` sets `outputDirs["plugin-uml-diagrams"]` to a relative path without `..`. `<topic>` is the title in kebab-case. `<NNN>` is a monotonic integer in that folder (001, 002, …); never reuse a number for a different diagram. Create the folder if it is missing.
 
 Write the diagram title and the labels in the language of the request. If the request names a language, use that one. Otherwise use the language the request is written in. Keep names the person already used. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`. The reply uses that same language.
 

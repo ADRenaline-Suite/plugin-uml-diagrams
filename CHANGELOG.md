@@ -1,19 +1,25 @@
 # Changelog
 
+## [0.3.0] - 2026-10-25
+
+### Changed
+
+- The plugin id is `plugin-uml-diagrams`. It was `adrenaline-uml-diagrams`. The repository is https://github.com/ADRenaline-Suite/plugin-uml-diagrams. Cursor commands stay `/uml-…`. In Claude Code the prefix is `/plugin-uml-diagrams:`.
+
 ## [0.2.0] - 2026-10-25
 
 ### Changed
 
 - The diagram title and the labels follow the language of the request. The skill and the commands stay in English. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`.
-- `/uml-help` links each command to its manual on GitHub. The `description` is `ADRenaline. Help: catalog of adrenaline-uml-diagrams (skills, rules, commands).`
+- `/uml-help` links each command to its manual on GitHub. The `description` is `ADRenaline. Help: catalog of plugin-uml-diagrams (skills, rules, commands).`
 - Each command `description` names the diagram and the question it answers, so the command picker is readable without knowing the type. `/uml-help` repeats that sentence.
 - Each diagram manual has three copyable examples. The first is the short command `/uml-<id>` with only the domain; then the command that fixes the content; then the sentence that names the diagram.
 
 ### Added
 
-- Rule `output-folder`: diagrams are saved in `uml-diagrams/`, or in the path set by `.cursor/adrenaline.json` under `outputDirs["adrenaline-uml-diagrams"]`.
+- Rule `output-folder`: diagrams are saved in `uml-diagrams/`, or in the path set by `.cursor/adrenaline.json` under `outputDirs["plugin-uml-diagrams"]`.
 - Mermaid as a secondary format for class, sequence, and state diagrams: `<folder>/<NNN>-<id>-<topic>.md`, following the new reference `references/mermaid.md`.
-- Claude Code support: manifest `.claude-plugin/plugin.json` and marketplace `.claude-plugin/marketplace.json`, so the repository installs with `claude plugin marketplace add d-mente/adrenaline-uml-diagrams`.
+- Claude Code support: manifest `.claude-plugin/plugin.json` and marketplace `.claude-plugin/marketplace.json`, so the repository installs with `claude plugin marketplace add ADRenaline-Suite/plugin-uml-diagrams`.
 - `author` in both manifests.
 - Delivery keeps `<folder>/STATUS.md` (`proposed` | `accepted` | `deprecated` | `superseded`) and prefers `accepted` over newer drafts.
 - Command `/uml-help`: one-line catalog of the plugin (skills, rules, commands, output). The output lists each file format with a short description.

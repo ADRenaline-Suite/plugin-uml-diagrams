@@ -17,7 +17,7 @@ Actors outside a system rectangle. Three to six ellipses. «include» when the c
 - Actor, use case, and system boundary.
 - Actor-to-case association.
 - «include», «extend», and generalization.
-- The use-case text is written by the adrenaline-project-manager plugin. This diagram shows only actors, boundaries, and goals.
+- The use-case text is written by the plugin-project-manager plugin. This diagram shows only actors, boundaries, and goals.
 
 ## Render
 
