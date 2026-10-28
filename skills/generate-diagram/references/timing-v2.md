@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 timing diagram
 
 Source: OMG UML 2.5.1, Annex A, timing diagram. It does not exist in the v1 catalog.
@@ -70,3 +72,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 timing diagram: the order moves from draft to confirmed and then to paid, and the payment moves from absent to authorizing and to authorized on that last stretch.
 ```
+
+## Done
+
+- The drawing answers when the state or the value of a few lifelines changes. The title states that question. It is not a sequence of who calls whom.
+- Lifelines show state or value along the time axis. Messages appear only if they explain a change. A duration constraint appears only if the request gave numbers.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML `robust` with `@` time marks. The delivery does not call it an approximation.

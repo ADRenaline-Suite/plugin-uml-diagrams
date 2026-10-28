@@ -5,7 +5,11 @@ description: "ADRenaline. Help: catalog of plugin-uml-diagrams (skills, rules, c
 
 # Help — plugin-uml-diagrams
 
-Print this catalog as the reply. One line per item. Do not run any skill or command. Do not invent entries that are not listed. If a component was added to the plugin and is missing here, add one line from its frontmatter `description` and say the catalog was refreshed.
+Print this catalog as the reply. Do not run any skill or command. Do not invent entries that are not listed. If a component was added to the plugin and is missing here, add one line from its frontmatter `description` and say the catalog was refreshed.
+
+Write the sentences in the language of the request. Keep command names, file ids, and every URL unchanged. Every id is a markdown link to the GitHub URL on its line. Do not print an id as plain text.
+
+Keep the section headings. Under Commands, group the lines by the skill named in the line. Each group opens with that skill name linked to its SKILL.md. One line per item: the linked id, then the sentence.
 
 ## Plugin
 
@@ -65,3 +69,9 @@ Print this catalog as the reply. One line per item. Do not run any skill or comm
 - Use-case text → `plugin-project-manager`.
 
 In Claude Code, commands use the prefix `/plugin-uml-diagrams:` (example: `/plugin-uml-diagrams:uml-help`).
+
+## Done
+
+- The reply is this catalog. Every id is a markdown link to the GitHub URL listed here. Commands are grouped by skill.
+- No skill ran. No command ran. No file was written.
+- No entry was invented. If a component exists in the plugin and is missing here, one line was added from its `description` and the reply says the catalog was refreshed.

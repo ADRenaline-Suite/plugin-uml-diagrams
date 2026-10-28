@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 class diagram
 
 Source: OMG UML 1.5, class diagram.
@@ -75,3 +77,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 1 class diagram of an order: an order contains one or more lines and is settled with an optional payment. Show only number, total, quantity, subtotal, and amount, and the operations confirm, subtotal, and authorize.
 ```
+
+## Done
+
+- The drawing answers what concepts exist and how they relate, in UML 1 class notation. The title states that question.
+- Notation is only UML 1 class: boxes with name, attributes, and operations; association, aggregation, composition, dependency, and generalization; multiplicity on the ends. Ports and internal parts are absent.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML. The delivery does not call it an approximation.

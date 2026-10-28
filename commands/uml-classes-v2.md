@@ -9,3 +9,5 @@ Draw the UML 2 class diagram.
 2. This command fixes the version (UML 2.5.1) and the diagram type. Do not ask for version or type again.
 3. In that skill, read `references/classes-v2.md` and adapt `assets/classes-v2.puml`.
 4. The user's text is the domain content. If that content is missing, ask for it.
+
+Before you close, evaluate `## Done` in that skill and in the reference this command names. Every item is true, or fix the delivery in this turn. Do not leave a file that fails an item. Do not mark it `accepted` while an item fails.

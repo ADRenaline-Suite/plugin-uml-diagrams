@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 use case diagram
 
 Source: OMG UML 1.5, use case diagram.
@@ -67,3 +69,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 1 use case diagram: the buyer pays an order. Paying always includes choosing the payment method, and it is optionally extended by applying a coupon.
 ```
+
+## Done
+
+- The drawing answers who uses the system and for which goals. The title states that question.
+- Notation is actor, use case, and system boundary, with actor-to-case association, «include», «extend», and generalization. The use-case text is absent.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML. The delivery does not call it an approximation.

@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 collaboration diagram
 
 Source: OMG UML 1.5, collaboration diagram. In UML 2 this diagram is called communication.
@@ -66,3 +68,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 1 collaboration diagram of the payment: buyer, checkout, and bank, with the numbered messages of the happy path.
 ```
+
+## Done
+
+- The drawing answers who is connected to whom, and in what order the messages are sent. The title states that question. The name is collaboration, not communication.
+- Objects or roles, links, and numbered messages are present. Combined fragments are absent.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- The Render line says approximation: a graph with numbered messages, not a native collaboration frame.

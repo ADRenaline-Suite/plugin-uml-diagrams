@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 statechart diagram
 
 Source: OMG UML 1.5, statechart. In UML 2 the diagram is called a state machine.
@@ -64,3 +66,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw the UML 1 statechart of an order: draft, confirmed, paid, and cancelled. From confirmed it moves to paid only if the amount is accepted, and the payment is recorded.
 ```
+
+## Done
+
+- The drawing answers what life a single object goes through, and which event makes it change. The title states that question.
+- States, an initial state, a final state, and transitions use the label `event [guard] / action`. Orthogonal regions and a protocol machine are absent.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is a native statechart. The delivery does not call it an approximation.

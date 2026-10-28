@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 component diagram
 
 Source: OMG UML 1.5, component diagram.
@@ -62,3 +64,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 1 component diagram: checkout depends on the bank gateway and on orders. No ports.
 ```
+
+## Done
+
+- The drawing answers what components exist and which ones they depend on. The title states that question.
+- Components, interfaces, dependencies, and realizations are present. Ports and assembly connectors are absent. The node where it is installed is absent.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML. The delivery does not call it an approximation and does not use `portin` or `portout`.

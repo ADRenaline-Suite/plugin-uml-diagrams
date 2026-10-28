@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 deployment diagram
 
 Source: OMG UML 2.5.1, Annex A, deployment diagram.
@@ -65,3 +67,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 deployment diagram of production: store.jar on the store server, bank-connector on the gateway, and the browser talks to the server over HTTPS.
 ```
+
+## Done
+
+- The drawing answers which artifacts run on which nodes. The title states that question.
+- Nodes, artifacts, and communication paths are present. A bare component inside the node, which is the UML 1 reading, is absent. Manifests appear only if the request names them.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML. The delivery does not call it an approximation.

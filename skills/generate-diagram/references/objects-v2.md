@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 object diagram
 
 Source: OMG UML 2.5.1, Annex A, object diagram.
@@ -69,3 +71,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 object diagram of the instant when order 1042 is linked to its line and to a payment of 320.00.
 ```
+
+## Done
+
+- The drawing answers what concrete values the instances have at one instant. The title states that question.
+- Each instance is underlined, with its classifier, slots that hold values, and links. It is not a class diagram.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML `object`. The delivery does not call it an approximation.

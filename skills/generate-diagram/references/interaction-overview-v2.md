@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 interaction overview diagram
 
 Source: OMG UML 2.5.1, Annex A. Interaction is the family: sequence, communication, timing, and this overview. It is not a fifteenth diagram.
@@ -66,3 +68,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw the UML 2 interaction overview of a purchase: select products, confirm the order, and, if the payment is accepted, charge and issue a receipt; otherwise decline the payment. Each node is an sd scenario.
 ```
+
+## Done
+
+- The drawing answers in what order several already defined scenarios follow one another. The title states that question.
+- Nodes are interaction uses whose labels start with `sd`. The message detail of each scenario is not expanded inside the node.
+- Every scenario the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- The Render line says approximation: an activity whose labels start with `sd`, and those labels are scenarios, not actions.

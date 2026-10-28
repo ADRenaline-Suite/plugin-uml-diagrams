@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 class diagram
 
 Source: OMG UML 2.5.1, Annex A, class diagram.
@@ -75,3 +77,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 class diagram of an order: composition with order lines and an optional association with the payment. Only the attributes and operations needed to read the total and authorize the payment.
 ```
+
+## Done
+
+- The drawing answers what concepts exist and how they relate. The title states that question.
+- Notation is only UML 2 class: boxes with name, attributes, and operations; association, aggregation, composition, dependency, generalization, and realization; multiplicity and role when they change the reading. Ports and internal parts are absent.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML. The delivery does not call it an approximation.

@@ -1,21 +1,38 @@
 # Changelog
 
-## [0.3.0] - 2026-10-25
+## [0.0.1] - 2026-10-28
 
-### Changed
+The version stays at 0.0.1 until the maintainer declares this plugin ready for distribution. The notes below record the work. They are not separate releases. Git tags `v0.1.0` and `v0.2.0` already exist and are left as they are.
+
+### 2026-10-28
+
+#### Added
+
+- The README explains each command in plain language: what the picture is, what question it answers, and when to pick that command instead of another. The one-line catalog in `/uml-help` stays one line.
+- Each skill and each diagram manual opens with a breadcrumb back to the README and to `generate-diagram`. The README link starts with a home icon.
+- `generate-diagram` and each diagram reference have a `## Done` list. The command evaluates both before it closes. A failed item is fixed in the same turn, or the diagram is not left `accepted`. Class, sequence, and state diagrams also evaluate the Mermaid list. Saving a diagram from the conversation is checked one to one.
+
+#### Changed
+
+- `/uml-help` prints each name as a link to that file on GitHub, and groups the commands under their skill. The sentences follow the language of the request.
+
+### 2026-10-25
+
+#### Changed
 
 - The plugin id is `plugin-uml-diagrams`. It was `adrenaline-uml-diagrams`. The repository is https://github.com/ADRenaline-Suite/plugin-uml-diagrams. Cursor commands stay `/uml-…`. In Claude Code the prefix is `/plugin-uml-diagrams:`.
-
-## [0.2.0] - 2026-10-25
-
-### Changed
-
 - The diagram title and the labels follow the language of the request. The skill and the commands stay in English. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`.
 - `/uml-help` links each command to its manual on GitHub. The `description` is `ADRenaline. Help: catalog of plugin-uml-diagrams (skills, rules, commands).`
 - Each command `description` names the diagram and the question it answers, so the command picker is readable without knowing the type. `/uml-help` repeats that sentence.
 - Each diagram manual has three copyable examples. The first is the short command `/uml-<id>` with only the domain; then the command that fixes the content; then the sentence that names the diagram.
+- Skill `generate-diagram` saves files as `<folder>/<NNN>-<id>-<topic>.puml` (and `.svg`), with monotonic `<NNN>` that is never reused for another diagram.
+- Skill `generate-diagram` no longer asks when the topic already exists: it edits the same `<NNN>` if the user amends that view; otherwise it allocates the next `<NNN>` and marks the previous row `superseded` in `STATUS.md`. It does not offer to extend the model.
+- Skill `generate-diagram` states the notation limits of the `uml-notation` rule, because Claude Code and other agents do not load rules.
+- Commands name the `generate-diagram` skill instead of a path from the plugin root, so they resolve in Cursor and in Claude Code.
+- Every reference states that "Diagram that is easy to read" is a guide for when the user leaves the content open, not a limit on what the user asked for.
+- Skill `generate-diagram` resolves the version without contradiction: a command fixes it; a diagram in the conversation or a construct of only one version (`alt`, ports, pins, token flow) sets it; otherwise UML 2 is proposed and confirmed. The catalog column is now "Version to propose".
 
-### Added
+#### Added
 
 - Rule `output-folder`: diagrams are saved in `uml-diagrams/`, or in the path set by `.cursor/adrenaline.json` under `outputDirs["plugin-uml-diagrams"]`.
 - Mermaid as a secondary format for class, sequence, and state diagrams: `<folder>/<NNN>-<id>-<topic>.md`, following the new reference `references/mermaid.md`.
@@ -27,22 +44,13 @@
 - Skill `generate-diagram`, section "Save a diagram from the conversation": a diagram already shown or pasted is saved one to one, with its type and version taken from the diagram itself.
 - Delivery lines `Fidelity` (as asked, or the list of changes) and `Guide` (within, or beyond with how it could be split).
 
-### Changed
-
-- Skill `generate-diagram` saves files as `<folder>/<NNN>-<id>-<topic>.puml` (and `.svg`), with monotonic `<NNN>` that is never reused for another diagram.
-- Skill `generate-diagram` no longer asks when the topic already exists: it edits the same `<NNN>` if the user amends that view; otherwise it allocates the next `<NNN>` and marks the previous row `superseded` in `STATUS.md`. It does not offer to extend the model.
-- Skill `generate-diagram` states the notation limits of the `uml-notation` rule, because Claude Code and other agents do not load rules.
-- Commands name the `generate-diagram` skill instead of a path from the plugin root, so they resolve in Cursor and in Claude Code.
-- Every reference states that "Diagram that is easy to read" is a guide for when the user leaves the content open, not a limit on what the user asked for.
-- Skill `generate-diagram` resolves the version without contradiction: a command fixes it; a diagram in the conversation or a construct of only one version (`alt`, ports, pins, token flow) sets it; otherwise UML 2 is proposed and confirmed. The catalog column is now "Version to propose".
-
-### Fixed
+#### Fixed
 
 - Command `/uml-help`: the `description` is quoted, so its frontmatter is valid YAML and the command loads.
 
-## [0.1.0] - 2026-10-18
+### 2026-10-18
 
-### Added
+#### Added
 
 - Skill `generate-diagram` for UML 1.5 and UML 2.5.1.
 - One reference, one PlantUML template, and one command for each diagram in the catalog.

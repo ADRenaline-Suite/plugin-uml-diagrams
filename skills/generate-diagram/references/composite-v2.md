@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 composite structure diagram
 
 Source: OMG UML 2.5.1, Annex A, composite structure diagram. It does not exist in the v1 catalog.
@@ -61,3 +63,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw the UML 2 composite structure of Order: inside it has the parts lines and payment, and the lines notify the total to the payment.
 ```
+
+## Done
+
+- The drawing answers what parts a classifier has inside, and how they are connected. The title states that question.
+- Parts are named `role : Type`, with ports and connectors. It is not a catalog of types and it does not list every attribute of a class diagram.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- The Render line says approximation: a container and inner rectangles, for the reason in this reference.

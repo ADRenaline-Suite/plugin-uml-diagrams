@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 deployment diagram
 
 Source: OMG UML 1.5, deployment diagram.
@@ -63,3 +65,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 1 deployment diagram of production: the UI in the browser and checkout on the server, joined by HTTPS. No UML 2 artifacts.
 ```
+
+## Done
+
+- The drawing answers on which nodes each component sits. The title states that question.
+- The component sits inside the node, with a communication association. The UML 2 artifact is absent. One diagram is one environment: production and test are not on the same drawing.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native nodes and components. The delivery does not call it an approximation.

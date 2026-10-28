@@ -1,7 +1,7 @@
 {
   "name": "plugin-uml-diagrams",
   "description": "Draws the 9 UML 1.5 diagrams and the 14 UML 2.5.1 diagrams, each in its own notation, without mixing versions.",
-  "version": "0.3.0",
+  "version": "0.0.1",
   "author": { "name": "d-mente" },
   "license": "MIT",
   "repository": "https://github.com/ADRenaline-Suite/plugin-uml-diagrams",

@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 use case diagram
 
 Source: OMG UML 2.5.1, Annex A, use case diagram. The frame may carry the uc heading.
@@ -67,3 +69,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 use case diagram of the store: the buyer pays an order, always chooses the payment method, and may extend the payment with a coupon.
 ```
+
+## Done
+
+- The drawing answers who uses the system and for which goals. The title states that question.
+- Notation is actor, use case, and subject, with association, «include», «extend», and generalization. The use-case text is absent.
+- The delivery says the `uc` frame is not drawn and the title takes its place.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.

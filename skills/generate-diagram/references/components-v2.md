@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 component diagram
 
 Source: OMG UML 2.5.1, Annex A, component diagram.
@@ -66,3 +68,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 component diagram: checkout provides Charge and uses Authorization, which the bank gateway provides.
 ```
+
+## Done
+
+- The drawing answers what components are assembled, and which interfaces they offer or require. The title states that question.
+- Components, provided interfaces, required interfaces, and usage dependencies are present. A port or an assembly connector appears only when the component boundary matters.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- If a provided interface is drawn as a solid line to the component, the Render line says that lollipop is an approximation, for the reason in this reference.

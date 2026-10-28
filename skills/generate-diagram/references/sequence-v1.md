@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 sequence diagram
 
 Source: OMG UML 1.5, sequence diagram.
@@ -65,3 +67,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw the UML 1 sequence diagram of the happy path for paying: the buyer asks checkout to charge, checkout asks the bank, and if the bank answers ok, checkout returns the receipt. No alt fragments.
 ```
+
+## Done
+
+- The drawing answers what messages are exchanged in a single scenario, top to bottom. The title states that question.
+- There is no combined fragment: no `alt`, `opt`, `loop`, `par`, `break`, or `ref`, even if PlantUML would accept them. A branch is another diagram, with its own title, and the Fidelity line says so.
+- Every message the user asked for or approved is in the source. Nothing was dropped.
+- Render is native sequence. The delivery does not call it an approximation.

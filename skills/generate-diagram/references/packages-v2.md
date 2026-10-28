@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 package diagram
 
 Source: OMG UML 2.5.1, Annex A, package diagram. It does not exist in the v1 catalog.
@@ -62,3 +64,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 package diagram: sales imports payments and catalog, and there are no cycles.
 ```
+
+## Done
+
+- The drawing answers how the model is grouped, and which package depends on which. The title states that question.
+- Packages and dependencies are present. «import» and «merge» are used only as this reference defines them. Internal content that does not change the dependency is absent.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML packages. The delivery does not call it an approximation.

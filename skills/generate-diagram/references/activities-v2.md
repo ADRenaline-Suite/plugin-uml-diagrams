@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 activity diagram
 
 Source: OMG UML 2.5.1, Annex A, activity diagram. Token-flow semantics.
@@ -67,3 +69,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 activity diagram with swimlanes: the buyer confirms the order and checkout, if there is a coupon, applies the discount, and in both cases charges.
 ```
+
+## Done
+
+- The drawing answers how a procedure moves forward, who does it, and where it decides. The title states that question.
+- The source uses `start`, actions, `if`, and `stop`. It is not a UML 1 activity graph. Object flow and pins appear only when the data is the question.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML. The delivery does not call it an approximation.

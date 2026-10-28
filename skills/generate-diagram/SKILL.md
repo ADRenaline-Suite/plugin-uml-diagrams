@@ -3,6 +3,8 @@ name: generate-diagram
 description: Draws a UML 1 or UML 2 diagram from the catalog, in the notation of the requested version, as a diagram that is easy to read. Use it when someone asks for a UML diagram of classes, objects, packages, composite structure, components, deployment, profiles, use cases, activities, states, a state machine, sequence, collaboration, communication, timing, or an interaction overview, or asks to save a UML diagram already shown in the conversation.
 ---
 
+[🏠 UML Diagrams](../../README.md)
+
 # Generate a UML diagram
 
 Draw one view. Architecture evaluation stays in `plugin-software-architect`. The use-case text stays in `plugin-project-manager`.
@@ -12,7 +14,7 @@ Source for v2: OMG UML 2.5.1, Annex A (14 diagrams). Source for v1: OMG UML 1.4 
 ## Before drawing
 
 1. Version and type. If this turn comes from a command, both are already fixed. If the diagram is already in the conversation, take both from it (see "Save a diagram from the conversation"). If the request uses a construct that exists in only one version (`alt`, `opt`, `loop`, `par`, ports, pins, token flow), that is the version. Otherwise, if the type is missing, ask for it and do not draw yet; if only the version is missing, propose UML 2 and wait for confirmation.
-2. Read only `references/<id>.md` for that version and type, and start from `assets/<id>.puml`. For classes, sequence, and states, also read `references/mermaid.md`.
+2. Read only `references/<id>.md` for that version and type, and start from `assets/<id>.puml`. For classes, sequence, and states, also read [references/mermaid.md](references/mermaid.md).
 3. The diagram answers one question, with names from the user's domain and a title that states the question. It holds what the user asked for: no more elements, and no fewer.
 
 ## Which diagram matches the question
@@ -106,6 +108,19 @@ Mermaid: <folder>/<NNN>-<id>-<topic>.md | not generated, <reason>
 
 Reading: <one sentence with the question the drawing answers>.
 ```
+
+## Done
+
+Before you close, evaluate this list and the `## Done` list in `references/<id>.md` for this diagram. If the id is a class, sequence, or state diagram, also evaluate `## Done` in `references/mermaid.md`. A command fixes the id. Every item is true, or you fix the diagram in this turn. Do not leave a file that fails an item. Do not mark it `accepted` while an item fails. If the type is still missing, or a diagram outside the catalog has no save location, ask and write no files.
+
+- One diagram, one question, one version. The file uses only that version's reference. A v1 file has no construct this skill lists as v2-only. A split required by the version rules is named in the `Fidelity` line.
+- Files are only in the output folder: `.puml` and `.svg` with the same `<NNN>`, `<id>`, and `<topic>`. `<NNN>` is not reused. `STATUS.md` matches them.
+- The title and the labels follow the language of the request. Names the person already used stay. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`.
+- Every element the user asked for or approved is in the source. Nothing was dropped. Anything added because the user left it open is named in the `Guide` line.
+- A diagram saved from the conversation matches it one to one: the same participants, elements, messages, names, order, and fragments. The guide did not redraw it. A diagram outside the catalog was not forced into a UML type.
+- The reply has the lines `Notation`, `Render`, `Fidelity`, `Guide`, `Files`, `Status`, and `Mermaid`, and they match the files. A difference that is not in `Fidelity` is a defect: fix the file or the line before closing.
+- The SVG has no `Syntax Error`. If no PlantUML is available, the `.puml` stays, the reply says the SVG was not generated, and it gives the command.
+- Mermaid exists only for classes, sequence, and states, and only when `mermaid.md` says to write it. Any other id has no Mermaid file.
 
 ## Catalog
 

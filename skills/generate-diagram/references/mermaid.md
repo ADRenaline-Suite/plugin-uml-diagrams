@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # Mermaid, secondary format
 
 Source: Mermaid 12 syntax for [class](https://mermaid.js.org/syntax/classDiagram.html), [sequence](https://mermaid.js.org/syntax/sequenceDiagram.html), and [state](https://mermaid.js.org/syntax/stateDiagram.html) diagrams. The UML notation still comes from the reference of the type and version.
@@ -98,3 +100,11 @@ stateDiagram-v2
   Cancelled --> [*]
 ```
 ````
+
+## Done
+
+This file is not a situation. Evaluate it only when the diagram id is `classes-v1`, `classes-v2`, `sequence-v1`, `sequence-v2`, `states-v1`, or `state-machine-v2`. Any other id has no Mermaid file, and a UML diagram is not drawn as a `flowchart`.
+
+- The block uses the Mermaid type in the table above and the same elements, names, and relations as the `.puml`.
+- A construct this reference says Mermaid cannot draw is omitted here, named in the delivery, and kept in the PlantUML file.
+- `sequence-v1` has no combined fragment. `states-v1` has no concurrent region.

@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 sequence diagram
 
 Source: OMG UML 2.5.1, Annex A, sequence diagram. Combined fragments are specified under Interactions.
@@ -69,3 +71,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 sequence diagram of paying an order, with one alt: if the bank authorizes, checkout returns the receipt; if it declines, checkout tells the buyer.
 ```
+
+## Done
+
+- The drawing answers what messages are exchanged over time, including the branches that matter. The title states that question.
+- Lifelines, messages, and returns are present as the scenario needs them. Each `alt` operand has a guard. Combined fragments are only `alt`, `opt`, `loop`, or `par` when there is real parallelism.
+- Every message the user asked for or approved is in the source. Nothing was dropped. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML, including `alt`, `opt`, and `loop`. The delivery does not call it an approximation.

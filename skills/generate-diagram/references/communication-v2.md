@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 communication diagram
 
 Source: OMG UML 2.5.1, Annex A. This is the old UML 1 collaboration diagram, with another name and an interaction frame.
@@ -66,3 +68,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 communication diagram of the happy-path payment among buyer, checkout, and bank, with numbered messages.
 ```
+
+## Done
+
+- The drawing answers who is linked to whom, and in what order the messages travel. The title states that question. Order comes from the sequence number, not from the height.
+- Lifelines, connectors, and numbered messages are present. Combined fragments are absent. A branch belongs on a UML 2 sequence diagram, not here.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- The Render line says approximation: a left-to-right graph with numbered messages, for the reason in this reference.

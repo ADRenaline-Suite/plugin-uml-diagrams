@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 state machine diagram
 
 Source: OMG UML 2.5.1, Annex A, state machine diagram. In UML 1 the name is statechart.
@@ -64,3 +66,11 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw the UML 2 state machine of an order, from draft to confirmed, and from there to paid or cancelled. The move to paid requires the amount to be accepted and records the payment.
 ```
+
+## Done
+
+- The drawing answers what life an object goes through, and which event, guard, and effect change its state. The title states that question.
+- States, an initial pseudostate, a final state, and transitions are present. Entry, do, and exit appear when the state does something while it lasts. An orthogonal region or a history state appears only when the life is not a single line.
+- A request that says statechart or states, without version 2, is not this file.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is a native state machine. The delivery does not call it an approximation.

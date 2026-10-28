@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 activity graph
 
 Source: OMG UML 1.4 and 1.5. In the UML 1.4 compliance points it is listed as an activity graph.
@@ -63,3 +65,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 1 activity graph to confirm and charge: if there is a coupon the discount is applied, and in both cases the order is charged. Use action-state syntax, not UML 2 token syntax.
 ```
+
+## Done
+
+- The drawing answers in what order the steps of a procedure happen, and where it branches. The title states that question.
+- The source uses action states, transitions, and the `(*)` syntax with quoted actions. It does not use `start`, `if`, or `stop`. Pins, object nodes, and token flow are absent. A decision is guarded transitions, not a free-standing control node.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render uses that `(*)` syntax. The delivery does not call a UML 2 activity a v1 graph.

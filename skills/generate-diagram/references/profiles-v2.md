@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 2 profile diagram
 
 Source: OMG UML 2.5.1, Annex A, profile diagram. It enters UML 2 from 2.2. It does not exist in the v1 catalog.
@@ -63,3 +65,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 2 profile diagram: the Payments profile defines the Authorizable stereotype, with the authorizationCode tag, extending the Class metaclass.
 ```
+
+## Done
+
+- The drawing answers which stereotype extends which metaclass, and with which tags. The title states that question.
+- Profile, stereotype, metaclass, and extension are present. A tagged value is an attribute of the stereotype. The boxes are concepts of UML, not business classes.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- The Render line says approximation: a stereotyped package, a «stereotype» class, and a generalization toward the metaclass.

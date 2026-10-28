@@ -1,3 +1,5 @@
+[🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
+
 # UML 1 object diagram
 
 Source: OMG UML 1.4 and 1.5. The notation defines the object diagram; the UML 1.4 compliance point does not separate it from the class diagram.
@@ -69,3 +71,10 @@ Prompt. The sentence names the diagram, and the skill chooses this reference.
 ```text
 Draw a UML 1 object diagram of one instant: order 1042 is paid, it has one line with quantity 2, and a payment of 320.00.
 ```
+
+## Done
+
+- The drawing answers what concrete values the objects have at one instant. The title states that question.
+- Each instance has an underlined name and type, slots `attribute = value`, and links. There is no class multiplicity. It is not a class diagram with examples inside the boxes.
+- Every element the user asked for or approved is in the source. The guide added something only where the user left it open, and the Guide line says so.
+- Render is native PlantUML `object`. The delivery does not call it an approximation.
