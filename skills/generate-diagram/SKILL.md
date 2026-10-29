@@ -3,6 +3,8 @@ name: generate-diagram
 description: Draws a UML 1 or UML 2 diagram from the catalog, in the notation of the requested version, as a diagram that is easy to read. Use it when someone asks for a UML diagram of classes, objects, packages, composite structure, components, deployment, profiles, use cases, activities, states, a state machine, sequence, collaboration, communication, timing, or an interaction overview, or asks to save a UML diagram already shown in the conversation.
 ---
 
+<p align="right">Language:&emsp;<img alt="English" src="https://raw.githubusercontent.com/ADRenaline-Suite/.github/main/profile/lang-en-on.svg" align="middle" style="vertical-align:middle"> <a href="SKILL.es.md" style="vertical-align:middle"><img alt="Español" src="https://raw.githubusercontent.com/ADRenaline-Suite/.github/main/profile/lang-es-off.svg" align="middle" style="vertical-align:middle"></a></p>
+
 [🏠 UML Diagrams](../../README.md)
 
 # Generate a UML diagram

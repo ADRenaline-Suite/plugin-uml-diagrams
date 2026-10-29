@@ -1,3 +1,5 @@
+<p align="right">Language:&emsp;<img alt="English" src="https://raw.githubusercontent.com/ADRenaline-Suite/.github/main/profile/lang-en-on.svg" align="middle" style="vertical-align:middle"> <a href="activities-v1.es.md" style="vertical-align:middle"><img alt="Español" src="https://raw.githubusercontent.com/ADRenaline-Suite/.github/main/profile/lang-es-off.svg" align="middle" style="vertical-align:middle"></a></p>
+
 [🏠 UML Diagrams](../../../README.md) / [Generate a UML diagram](../SKILL.md)
 
 # UML 1 activity graph

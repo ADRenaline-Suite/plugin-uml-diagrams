@@ -4,6 +4,13 @@
 
 The version stays at 0.0.1 until the maintainer declares this plugin ready for distribution. The notes below record the work. They are not separate releases. Git tags `v0.1.0` and `v0.2.0` already exist and are left as they are.
 
+### 2026-10-29
+
+#### Added
+
+- `README.es.md` repeats this README in Spanish. Both files open with the language switch from ADR 4. Skills, commands, and rules stay English.
+- Each `SKILL.md` and each reference manual has a Spanish sibling (`SKILL.es.md`, `<name>.es.md`) with the same switch. The agent still reads only the English file.
+
 ### 2026-10-28
 
 #### Added
@@ -15,6 +22,9 @@ The version stays at 0.0.1 until the maintainer declares this plugin ready for d
 #### Changed
 
 - `/uml-help` prints each name as a link to that file on GitHub, and groups the commands under their skill. The sentences follow the language of the request.
+- `/uml-help` opens with what the plugin does, then Commands, Skills, Rules, Output, and Not in this plugin. Output links the plugin repository. Not in this plugin links a plugin only when its GitHub repository exists.
+- The catalog shows `ADRenaline UML Diagrams`, not the repository name. Other plugins in Not in this plugin use the same kind of name.
+- `/uml-help` followed by other names explains those names and does not run them. Alone, it still prints the full catalog.
 
 ### 2026-10-25
 
