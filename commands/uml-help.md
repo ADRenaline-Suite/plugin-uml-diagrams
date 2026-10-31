@@ -65,6 +65,7 @@ Keep the section headings, in this order: Plugin, Commands, Skills, Rules, Outpu
 | `.svg` | Rendered diagram image |
 | `.md` | Mermaid version (classes, sequence, states) |
 | `STATUS.md` | State of each diagram |
+| `ORIGIN.json` | Folder marker: `suite`, `plugin`, `repository`, `convention` `adr-001`. Not an `<NNN>` file |
 
 ## Not in this plugin
 

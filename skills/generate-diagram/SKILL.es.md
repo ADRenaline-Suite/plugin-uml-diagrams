@@ -77,6 +77,8 @@ Escribe el título del diagrama y las etiquetas en el idioma del pedido. Si el p
 
 Mantén `<folder>/STATUS.md` con las columnas `N`, `archivo`, `estado`, `sustituye`, `notas`. Estados: `proposed`, `accepted`, `deprecated`, `superseded`. Al elegir qué diagrama creer, prefiere `accepted` sobre borradores más nuevos o archivos `deprecated`.
 
+Mantén `<folder>/ORIGIN.json` junto a `STATUS.md`. No es un archivo `<NNN>` y no tiene fila en `STATUS.md`. Escríbelo cuando se crea la carpeta. En una entrega posterior, vuelve a escribirlo solo si falta o si un campo difiere. Los campos son `suite` `ADRenaline-Suite`, `plugin` `plugin-uml-diagrams`, `repository` `https://github.com/ADRenaline-Suite/plugin-uml-diagrams` y `convention` `adr-001`. El marcador nombra la carpeta. No dice que cada archivo de dentro siga sin cambios.
+
 Si ya existe un archivo de ese tema, no preguntes. Decide a partir del texto de la persona:
 
 - El texto pide cambiar **ese** diagrama (actualizar, extender, enmendar la misma vista): edita los archivos existentes; conserva el mismo `<NNN>` y `accepted` en `STATUS.md`.
@@ -117,6 +119,7 @@ Antes de cerrar, evalúa esta lista y la lista `## Done` de `references/<id>.md`
 
 - Un diagrama, una pregunta, una versión. El archivo usa solo la referencia de esa versión. Un archivo v1 no tiene un constructo que este skill lista como exclusivo de v2. Una partición exigida por las reglas de versión se nombra en la línea `Fidelity`.
 - Los archivos están solo en la carpeta de salida: `.puml` y `.svg` con el mismo `<NNN>`, `<id>` y `<topic>`. `<NNN>` no se reutiliza. `STATUS.md` coincide con ellos.
+- `ORIGIN.json` está en la carpeta de salida. Sus cuatro campos coinciden con este plugin. No tiene fila en `STATUS.md`.
 - El título y las etiquetas siguen el idioma del pedido. Los nombres que la persona ya usó se conservan. Las columnas de `STATUS.md` siguen `N`, `archivo`, `estado`, `sustituye`, `notas`.
 - Cada elemento que la persona pidió o aprobó está en la fuente. No se quitó nada. Lo añadido porque la persona lo dejó abierto se nombra en la línea `Guide`.
 - Un diagrama guardado desde la conversación coincide uno a uno: los mismos participantes, elementos, mensajes, nombres, orden y fragmentos. La guía no lo redibujó. Un diagrama fuera del catálogo no se forzó a un tipo UML.

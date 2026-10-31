@@ -4,6 +4,12 @@
 
 The version stays at 0.0.1 until the maintainer declares this plugin ready for distribution. The notes below record the work. They are not separate releases. Git tags `v0.1.0` and `v0.2.0` already exist and are left as they are.
 
+### 2026-10-31
+
+#### Added
+
+- The output folder keeps `ORIGIN.json` (`suite`, `plugin`, `repository`, `convention` `adr-001`) so another agent can see which ADRenaline plugin wrote it. It is not an `<NNN>` file and it has no row in `STATUS.md`.
+
 ### 2026-10-29
 
 #### Added

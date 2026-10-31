@@ -77,6 +77,8 @@ Write the diagram title and the labels in the language of the request. If the re
 
 Keep `<folder>/STATUS.md` with columns `N`, `archivo`, `estado`, `sustituye`, `notas`. States: `proposed`, `accepted`, `deprecated`, `superseded`. When choosing which diagram to trust, prefer `accepted` over newer drafts or deprecated files.
 
+Keep `<folder>/ORIGIN.json` beside `STATUS.md`. It is not an `<NNN>` file and it has no row in `STATUS.md`. Write it when the folder is created. On a later delivery, write it again only when it is missing or a field differs. The fields are `suite` `ADRenaline-Suite`, `plugin` `plugin-uml-diagrams`, `repository` `https://github.com/ADRenaline-Suite/plugin-uml-diagrams`, and `convention` `adr-001`. The marker names the folder. It does not say that each file inside is unchanged.
+
 If a file for that topic already exists, do not ask. Decide from the user's text:
 
 - The text asks to change **that** diagram (update, extend, amend the same view): edit the existing files; keep the same `<NNN>` and `accepted` in `STATUS.md`.
@@ -117,6 +119,7 @@ Before you close, evaluate this list and the `## Done` list in `references/<id>.
 
 - One diagram, one question, one version. The file uses only that version's reference. A v1 file has no construct this skill lists as v2-only. A split required by the version rules is named in the `Fidelity` line.
 - Files are only in the output folder: `.puml` and `.svg` with the same `<NNN>`, `<id>`, and `<topic>`. `<NNN>` is not reused. `STATUS.md` matches them.
+- `ORIGIN.json` is in the output folder. Its four fields match this plugin. It has no row in `STATUS.md`.
 - The title and the labels follow the language of the request. Names the person already used stay. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`.
 - Every element the user asked for or approved is in the source. Nothing was dropped. Anything added because the user left it open is named in the `Guide` line.
 - A diagram saved from the conversation matches it one to one: the same participants, elements, messages, names, order, and fragments. The guide did not redraw it. A diagram outside the catalog was not forced into a UML type.

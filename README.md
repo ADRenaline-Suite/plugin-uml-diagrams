@@ -48,7 +48,7 @@ gh skill install ADRenaline-Suite/plugin-uml-diagrams
 
 It uses no variables and no services. The render is PlantUML.
 
-Each diagram is saved at the project root as two files: the source `uml-diagrams/<NNN>-<id>-<topic>.puml` and the image `uml-diagrams/<NNN>-<id>-<topic>.svg`, with a monotonic `<NNN>` that is never reused. The folder also keeps `STATUS.md` (`proposed` | `accepted` | `deprecated` | `superseded`); prefer `accepted` when several versions exist. The SVG needs one of `plantuml` on the PATH, `java -jar plantuml.jar`, or Docker with the `plantuml/plantuml` image. Without any of them, only the `.puml` is saved and the delivery gives the command to render it.
+Each diagram is saved at the project root as two files: the source `uml-diagrams/<NNN>-<id>-<topic>.puml` and the image `uml-diagrams/<NNN>-<id>-<topic>.svg`, with a monotonic `<NNN>` that is never reused. The folder also keeps `STATUS.md` (`proposed` | `accepted` | `deprecated` | `superseded`); prefer `accepted` when several versions exist. Beside it, `ORIGIN.json` names this plugin (`suite`, `plugin`, `repository`, `convention` `adr-001`). It is not an `<NNN>` file. The SVG needs one of `plantuml` on the PATH, `java -jar plantuml.jar`, or Docker with the `plantuml/plantuml` image. Without any of them, only the `.puml` is saved and the delivery gives the command to render it.
 
 Class, sequence, and state diagrams also get `uml-diagrams/<NNN>-<id>-<topic>.md` with the same diagram in Mermaid, which GitHub, GitLab, and Azure DevOps render without tools. The other types have no native Mermaid equivalent, so they get no Mermaid file. The rules are in [references/mermaid.md](skills/generate-diagram/references/mermaid.md).
 
