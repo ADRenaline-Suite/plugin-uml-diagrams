@@ -50,13 +50,13 @@ Keep the section headings, in this order: Plugin, Commands, Skills, Rules, Outpu
 
 ## Rules
 
-- [**output-folder**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/output-folder.mdc) — Every diagram goes in `uml-diagrams/` (or `outputDirs["plugin-uml-diagrams"]` in `.cursor/adrenaline.json`).
+- [**output-folder**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/output-folder.mdc) — Every diagram goes in `adrenaline/uml-diagrams/` (or `outputDirs["plugin-uml-diagrams"]` in `.cursor/adrenaline.json`).
 - [**uml-notation**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/uml-notation.mdc) — Do not mix UML 1 and UML 2 notation; use only the matching reference.
 
 ## Output
 
 - Repository: [**ADRenaline UML Diagrams**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams).
-- Folder: `uml-diagrams/` (override via `.cursor/adrenaline.json`).
+- Folder: `adrenaline/uml-diagrams/` (override via `.cursor/adrenaline.json`). An existing `uml-diagrams/` at the project root keeps receiving files.
 - Name: `<NNN>-<id>-<topic>.<ext>`, with monotonic `<NNN>`.
 
 | Format | Description |

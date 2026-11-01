@@ -5,9 +5,11 @@ alwaysApply: true
 
 # Output folder
 
-Every file this plugin creates goes inside `uml-diagrams/` at the project root.
+Every file this plugin creates goes inside `adrenaline/uml-diagrams/` at the project root.
 
-If `.cursor/adrenaline.json` exists and `outputDirs["plugin-uml-diagrams"]` holds a path, use that path instead. The path is relative to the project root, with no `..` and not absolute. If it is not valid, use `uml-diagrams/` and say so.
+If `.cursor/adrenaline.json` exists and `outputDirs["plugin-uml-diagrams"]` holds a path, use that path instead. The path is relative to the project root, with no `..` and not absolute. If it is not valid, use `adrenaline/uml-diagrams/` and say so.
+
+If `adrenaline/uml-diagrams/` does not exist yet and `uml-diagrams/` at the project root already has this plugin's `ORIGIN.json` or `STATUS.md`, keep writing in `uml-diagrams/` and say so.
 
 Create the folder if it is missing. Do not write diagrams anywhere else.
 

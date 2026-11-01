@@ -10,6 +10,11 @@ The version stays at 0.0.1 until the maintainer declares this plugin ready for d
 
 - The output folder keeps `ORIGIN.json` (`suite`, `plugin`, `repository`, `convention` `adr-001`) so another agent can see which ADRenaline plugin wrote it. It is not an `<NNN>` file and it has no row in `STATUS.md`.
 
+#### Changed
+
+- A new output folder is `adrenaline/uml-diagrams/`. An existing `uml-diagrams/` at the project root keeps receiving files. `outputDirs` still wins.
+- The reply always draws one mermaid block and does not paste the PlantUML source or link the SVG. A local SVG is not drawn in the chat. When there is no `.md`, the block is a flowchart of the same steps and it is not saved. The `.puml` stays the UML source.
+
 ### 2026-10-29
 
 #### Added

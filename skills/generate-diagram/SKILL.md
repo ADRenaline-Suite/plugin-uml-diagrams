@@ -71,7 +71,7 @@ Then follow Delivery.
 
 ## Delivery
 
-Save the PlantUML source as `<folder>/<NNN>-<id>-<topic>.puml` and the rendered image next to it as `<folder>/<NNN>-<id>-<topic>.svg`. `<folder>` is `uml-diagrams/` at the project root, unless `.cursor/adrenaline.json` sets `outputDirs["plugin-uml-diagrams"]` to a relative path without `..`. `<topic>` is the title in kebab-case. `<NNN>` is a monotonic integer in that folder (001, 002, …); never reuse a number for a different diagram. Create the folder if it is missing.
+Save the PlantUML source as `<folder>/<NNN>-<id>-<topic>.puml` and the rendered image next to it as `<folder>/<NNN>-<id>-<topic>.svg`. `<folder>` is `adrenaline/uml-diagrams/` at the project root, unless `.cursor/adrenaline.json` sets `outputDirs["plugin-uml-diagrams"]` to a relative path without `..`. If `adrenaline/uml-diagrams/` does not exist yet and `uml-diagrams/` at the project root already has this plugin's `ORIGIN.json` or `STATUS.md`, `<folder>` stays `uml-diagrams/` and the delivery says so. `<topic>` is the title in kebab-case. `<NNN>` is a monotonic integer in that folder (001, 002, …); never reuse a number for a different diagram. Create the folder if it is missing.
 
 Write the diagram title and the labels in the language of the request. If the request names a language, use that one. Otherwise use the language the request is written in. Keep names the person already used. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`. The reply uses that same language.
 
@@ -108,10 +108,14 @@ Files: <folder>/<NNN>-<id>-<topic>.puml, <folder>/<NNN>-<id>-<topic>.svg
 Status: <accepted|proposed|…> (see STATUS.md)
 Mermaid: <folder>/<NNN>-<id>-<topic>.md | not generated, <reason>
 
-<plantuml block>
-
 Reading: <one sentence with the question the drawing answers>.
 ```
+
+The reply never pastes the PlantUML source and never links the `.svg`. The chat does not draw a local SVG. It always draws one `mermaid` block.
+
+When the delivery writes the `.md`, paste that block.
+
+When the delivery has no `.md`, paste a `mermaid` `flowchart` with the same steps, decisions, and labels as the `.puml`. That block is only the chat view. Do not save it as a file. The UML source stays the `.puml`.
 
 ## Done
 
@@ -124,6 +128,7 @@ Before you close, evaluate this list and the `## Done` list in `references/<id>.
 - Every element the user asked for or approved is in the source. Nothing was dropped. Anything added because the user left it open is named in the `Guide` line.
 - A diagram saved from the conversation matches it one to one: the same participants, elements, messages, names, order, and fragments. The guide did not redraw it. A diagram outside the catalog was not forced into a UML type.
 - The reply has the lines `Notation`, `Render`, `Fidelity`, `Guide`, `Files`, `Status`, and `Mermaid`, and they match the files. A difference that is not in `Fidelity` is a defect: fix the file or the line before closing.
+- The reply draws one `mermaid` block and does not include a PlantUML block or a markdown image of the `.svg`. If a `.md` was written, that block is the one in the file. If no `.md` was written, the block is a `flowchart` with the same steps, decisions, and labels as the `.puml`, and it is not saved.
 - The SVG has no `Syntax Error`. If no PlantUML is available, the `.puml` stays, the reply says the SVG was not generated, and it gives the command.
 - Mermaid exists only for classes, sequence, and states, and only when `mermaid.md` says to write it. Any other id has no Mermaid file.
 
