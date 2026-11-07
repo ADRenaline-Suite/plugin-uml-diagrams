@@ -27,6 +27,8 @@ De tres a cinco nodos en horizontal, con mensajes numerados 1, 2, 3 en los enlac
 
 PlantUML no tiene un diagrama de colaboración de primera clase (sigue siendo una petición abierta de PlantUML). La entrega usa un grafo con mensajes numerados y lo declara como una aproximación de disposición, no como un marco de colaboración nativo.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/collaboration-v1.puml`. Sustituye los nombres del dominio y conserva la forma.

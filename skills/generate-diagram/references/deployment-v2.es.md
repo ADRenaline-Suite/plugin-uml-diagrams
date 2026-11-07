@@ -26,6 +26,8 @@ De dos a cuatro nodos, el artefacto dentro del nodo y la ruta de comunicación c
 
 PlantUML dibuja este diagrama de forma nativa.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/deployment-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

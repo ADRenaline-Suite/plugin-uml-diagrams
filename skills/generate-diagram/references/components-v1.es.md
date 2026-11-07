@@ -26,6 +26,8 @@ De tres a cinco componentes y dependencias discontinuas con un estereotipo legib
 
 PlantUML dibuja componentes y dependencias de forma nativa. Un pedido v1 no usa portin, portout ni conectores de estructura compuesta.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/components-v1.puml`. Sustituye los nombres del dominio y conserva la forma.

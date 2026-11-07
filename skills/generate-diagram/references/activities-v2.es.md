@@ -27,6 +27,8 @@ Carriles con el responsable, un nodo inicial, acciones, una decisión con las do
 
 PlantUML dibuja este diagrama de forma nativa con `start`, acciones, `if` y `stop`.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/activities-v2.puml`. Sustituye los nombres del dominio y conserva la forma.
@@ -37,10 +39,10 @@ PlantUML dibuja este diagrama de forma nativa con `start`, acciones, `if` y `sto
 @startuml
 title How an order is confirmed and charged
 
-|Buyer|
+|#FFFFFF|Buyer|
 start
 :Confirm order;
-|Checkout|
+|#FFFFFF|Checkout|
 if (Coupon?) then (yes)
   :Apply discount;
 else (no)

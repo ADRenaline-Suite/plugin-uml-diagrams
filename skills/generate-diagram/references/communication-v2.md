@@ -27,6 +27,8 @@ Three to five lifelines laid out horizontally, links, and numbered messages. Pre
 
 PlantUML has no first-class communication diagram. The delivery uses a left-to-right graph with numbered messages and declares it as an approximation.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/communication-v2.puml`. Replace the domain names and keep the shape.

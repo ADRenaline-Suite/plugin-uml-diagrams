@@ -26,6 +26,8 @@ One outer classifier and two to four parts with a role `: Type`. Connectors betw
 
 PlantUML has no first-class composite structure diagram. The delivery uses a container and inner rectangles as an approximation of parts and connectors, and it declares that.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/composite-v2.puml`. Replace the domain names and keep the shape.

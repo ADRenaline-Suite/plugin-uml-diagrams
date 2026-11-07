@@ -27,6 +27,8 @@ Unas pocas instancias subrayadas, ranuras y enlaces. Un momento.
 
 PlantUML dibuja este diagrama de forma nativa con `object`.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/objects-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

@@ -27,6 +27,8 @@ Un actor a la izquierda y dos o tres participantes. Un escenario, el camino feli
 
 PlantUML dibuja la secuencia de forma nativa. Aunque acepte alt, un pedido v1 no lo usa.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/sequence-v1.puml`. Sustituye los nombres del dominio y conserva la forma.

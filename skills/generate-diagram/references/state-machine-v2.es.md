@@ -27,6 +27,8 @@ Un clasificador, de tres a seis estados, una transición `event [guard] / effect
 
 PlantUML dibuja la máquina de estados de forma nativa.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/state-machine-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

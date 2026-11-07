@@ -26,6 +26,8 @@ Two to four components. A provided interface as a lollipop and an explicit requi
 
 PlantUML draws components and interfaces natively. The lollipop is approximated with the interface joined by a solid line to the component that provides it, and a dashed dependency from the one that requires it.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/components-v2.puml`. Replace the domain names and keep the shape.

@@ -27,6 +27,8 @@ Actors outside the subject. Three to six ellipses. «include» for mandatory reu
 
 PlantUML draws actors, cases, and relationships natively. The frame with a uc heading is not drawn; the title replaces it and that must be said.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/use-cases-v2.puml`. Replace the domain names and keep the shape.

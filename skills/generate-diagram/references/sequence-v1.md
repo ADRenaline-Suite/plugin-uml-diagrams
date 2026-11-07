@@ -27,6 +27,8 @@ An actor on the left and two or three participants. One scenario, the happy path
 
 PlantUML draws sequence natively. Even if it accepts alt, a v1 request does not use it.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/sequence-v1.puml`. Replace the domain names and keep the shape.

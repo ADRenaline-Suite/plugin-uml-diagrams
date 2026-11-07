@@ -27,6 +27,8 @@ A few instances, underlined name `name : Type`, slots with values, and links. On
 
 PlantUML draws this diagram natively with `object`.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/objects-v1.puml`. Replace the domain names and keep the shape.

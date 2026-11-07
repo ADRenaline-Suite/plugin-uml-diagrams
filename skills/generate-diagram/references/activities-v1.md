@@ -27,6 +27,8 @@ An initial state, actions as states, one decision with both exits labeled, and a
 
 PlantUML draws the graph with the old `(*)` syntax and quoted actions. That is the syntax for this request, not `start` / `if` / `stop`.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/activities-v1.puml`. Replace the domain names and keep the shape.

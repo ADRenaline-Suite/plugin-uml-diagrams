@@ -27,6 +27,8 @@ Actores fuera del sujeto. De tres a seis elipses. «include» para la reutilizac
 
 PlantUML dibuja actores, casos y relaciones de forma nativa. El marco con encabezado uc no se dibuja; el título lo sustituye y eso hay que decirlo.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/use-cases-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

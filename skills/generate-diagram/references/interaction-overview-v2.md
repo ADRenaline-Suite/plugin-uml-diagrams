@@ -26,6 +26,8 @@ The shape of an activity: a start, nodes that name an interaction (`sd Name`), o
 
 PlantUML has no interaction-overview frame. The delivery uses an activity whose labels start with `sd` and declares that. Those labels are scenarios, not actions of an activity diagram.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/interaction-overview-v2.puml`. Replace the domain names and keep the shape.

@@ -27,6 +27,8 @@ Swimlanes with the owner, an initial node, actions, one decision with both exits
 
 PlantUML draws this diagram natively with `start`, actions, `if`, and `stop`.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/activities-v2.puml`. Replace the domain names and keep the shape.
@@ -37,10 +39,10 @@ PlantUML draws this diagram natively with `start`, actions, `if`, and `stop`.
 @startuml
 title How an order is confirmed and charged
 
-|Buyer|
+|#FFFFFF|Buyer|
 start
 :Confirm order;
-|Checkout|
+|#FFFFFF|Checkout|
 if (Coupon?) then (yes)
   :Apply discount;
 else (no)

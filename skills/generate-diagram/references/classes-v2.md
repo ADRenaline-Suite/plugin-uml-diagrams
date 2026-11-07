@@ -27,6 +27,8 @@ Three to six boxes with three compartments. Associations with multiplicity and a
 
 PlantUML draws this diagram natively.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/classes-v2.puml`. Replace the domain names and keep the shape.
@@ -35,7 +37,6 @@ PlantUML draws this diagram natively.
 
 ```plantuml
 @startuml
-skinparam shadowing false
 hide empty members
 title What data an order has and how it relates to its payment
 

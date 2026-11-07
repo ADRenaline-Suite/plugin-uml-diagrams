@@ -26,6 +26,8 @@ De dos a cuatro componentes. Una interfaz proporcionada como piruleta y una inte
 
 PlantUML dibuja componentes e interfaces de forma nativa. La piruleta se aproxima con la interfaz unida por una línea continua al componente que la proporciona, y una dependencia discontinua desde el que la requiere.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/components-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

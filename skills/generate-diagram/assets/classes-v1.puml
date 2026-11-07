@@ -1,5 +1,5 @@
 @startuml
-skinparam shadowing false
+!include style.puml
 hide empty members
 title What data an order has and how it relates to its payment
 

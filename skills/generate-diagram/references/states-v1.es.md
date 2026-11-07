@@ -27,6 +27,8 @@ Un objeto, de tres a seis estados, un estado inicial y un estado final. Cada tra
 
 PlantUML dibuja el statechart de forma nativa.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/states-v1.puml`. Sustituye los nombres del dominio y conserva la forma.

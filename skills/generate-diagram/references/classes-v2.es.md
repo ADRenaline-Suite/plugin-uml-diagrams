@@ -27,6 +27,8 @@ De tres a seis cajas con tres compartimentos. Asociaciones con multiplicidad y u
 
 PlantUML dibuja este diagrama de forma nativa.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/classes-v2.puml`. Sustituye los nombres del dominio y conserva la forma.
@@ -35,7 +37,6 @@ PlantUML dibuja este diagrama de forma nativa.
 
 ```plantuml
 @startuml
-skinparam shadowing false
 hide empty members
 title What data an order has and how it relates to its payment
 

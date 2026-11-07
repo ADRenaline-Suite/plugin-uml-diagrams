@@ -26,6 +26,8 @@ Dos o tres nodos, los componentes dentro del nodo donde corren y una línea de c
 
 PlantUML dibuja nodos y componentes de forma nativa.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/deployment-v1.puml`. Sustituye los nombres del dominio y conserva la forma.

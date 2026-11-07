@@ -27,6 +27,8 @@ Actores fuera de un rectángulo de sistema. De tres a seis elipses. «include» 
 
 PlantUML dibuja este diagrama de forma nativa.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/use-cases-v1.puml`. Sustituye los nombres del dominio y conserva la forma.

@@ -27,6 +27,8 @@ Dos o tres líneas, el tiempo de izquierda a derecha, estados con nombre. Pocos 
 
 PlantUML dibuja este diagrama de forma nativa con `robust` y marcas de tiempo `@`.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/timing-v2.puml`. Sustituye los nombres del dominio y conserva la forma.
@@ -35,6 +37,7 @@ PlantUML dibuja este diagrama de forma nativa con `robust` y marcas de tiempo `@
 
 ```plantuml
 @startuml
+skinparam monochrome true
 title When the order and the payment change during the charge
 
 robust "Order" as order

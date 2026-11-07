@@ -27,6 +27,8 @@ An actor on the left, two or three lifelines, read top to bottom. At most one al
 
 PlantUML draws this diagram natively, including alt, opt, and loop.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/sequence-v2.puml`. Replace the domain names and keep the shape.

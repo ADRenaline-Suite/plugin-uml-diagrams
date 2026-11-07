@@ -26,6 +26,8 @@ One «profile» package, one stereotype, and one metaclass. The extension arrow 
 
 PlantUML has no first-class profile diagram. The delivery uses a stereotyped package, a «stereotype» class, and a generalization toward the metaclass, and it declares that as an approximation of the extension.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/profiles-v2.puml`. Replace the domain names and keep the shape.

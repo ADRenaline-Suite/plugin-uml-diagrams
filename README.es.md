@@ -14,7 +14,7 @@ Quien necesita una vista UML dentro de una conversación con el agente: arquitec
 
 Portable, para cualquier agente que siga [Agent Skills](https://agentskills.io/specification):
 
-- Skill [generate-diagram](skills/generate-diagram/SKILL.es.md), con una referencia y una plantilla PlantUML por cada diagrama del catálogo (9 de UML 1 y 14 de UML 2). El skill también lleva los límites de notación y la carpeta de salida, para que un agente sin rules los conserve.
+- Skill [generate-diagram](skills/generate-diagram/SKILL.es.md), con una referencia y una plantilla PlantUML por cada diagrama del catálogo (9 de UML 1 y 14 de UML 2). [style.es.md](skills/generate-diagram/references/style.es.md) deja cada dibujo en negro sobre blanco, según la cláusula 6.4.1 de UML 2.5.1. El skill también lleva los límites de notación y la carpeta de salida, para que un agente sin rules los conserve.
 
 Cursor y Claude Code:
 
@@ -23,6 +23,7 @@ Cursor y Claude Code:
 Solo Cursor:
 
 - Rule `uml-notation`, que impide mezclar las dos notaciones.
+- Rule `uml-style`, que deja el dibujo en negro sobre blanco. El gris solo cabe junto a una marca escrita.
 - Rule `output-folder`, que guarda cada diagrama dentro de la carpeta de salida.
 
 ## Instalación
@@ -50,7 +51,7 @@ No usa variables ni servicios. El render es PlantUML.
 
 Cada diagrama se guarda en la raíz del proyecto como dos archivos: la fuente `adrenaline/uml-diagrams/<NNN>-<id>-<topic>.puml` y la imagen `adrenaline/uml-diagrams/<NNN>-<id>-<topic>.svg`, con un `<NNN>` monótono que no se reutiliza. La carpeta también lleva `STATUS.md` (`proposed` | `accepted` | `deprecated` | `superseded`); si hay varias versiones, manda `accepted`. Junto a él, `ORIGIN.json` nombra este plugin (`suite`, `plugin`, `repository`, `convention` `adr-001`). No es un archivo `<NNN>`. El SVG necesita `plantuml` en el PATH, `java -jar plantuml.jar`, o Docker con la imagen `plantuml/plantuml`. Sin ninguno de los tres, solo se guarda el `.puml` y la entrega da el comando para renderizarlo.
 
-Los diagramas de clases, secuencia y estados también reciben `adrenaline/uml-diagrams/<NNN>-<id>-<topic>.md` con el mismo diagrama en Mermaid, que GitHub, GitLab y Azure DevOps renderizan sin herramientas. Los otros tipos no tienen equivalente nativo en Mermaid, así que no reciben ese archivo. Las reglas están en [references/mermaid.md](skills/generate-diagram/references/mermaid.es.md).
+Los diagramas de clases, secuencia y estados también reciben `adrenaline/uml-diagrams/<NNN>-<id>-<topic>.md` con el mismo diagrama en Mermaid y una lectura breve debajo. GitHub, GitLab y Azure DevOps renderizan el diagrama sin herramientas. Los otros tipos no tienen equivalente nativo en Mermaid, así que no reciben ese archivo. Las reglas están en [references/mermaid.md](skills/generate-diagram/references/mermaid.es.md).
 
 Si `adrenaline/uml-diagrams/` aún no existe y `uml-diagrams/` en la raíz ya tiene la salida de este plugin, los archivos siguen ahí.
 

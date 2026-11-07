@@ -26,6 +26,8 @@ La forma de una actividad: un inicio, nodos que nombran una interacción (`sd Na
 
 PlantUML no tiene un marco de vista general de interacción. La entrega usa una actividad cuyas etiquetas empiezan por `sd` y lo declara. Esas etiquetas son escenarios, no acciones de un diagrama de actividades.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/interaction-overview-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

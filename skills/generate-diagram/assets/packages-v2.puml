@@ -1,4 +1,5 @@
 @startuml
+!include style.puml
 title Who depends on whom in the store
 
 package "sales" as sales

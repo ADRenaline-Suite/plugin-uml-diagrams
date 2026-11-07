@@ -26,6 +26,8 @@ Two or three nodes, the components inside the node where they run, and a communi
 
 PlantUML draws nodes and components natively.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/deployment-v1.puml`. Replace the domain names and keep the shape.

@@ -27,6 +27,8 @@ Un actor a la izquierda, dos o tres líneas de vida, leídas de arriba abajo. Co
 
 PlantUML dibuja este diagrama de forma nativa, incluidos alt, opt y loop.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/sequence-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

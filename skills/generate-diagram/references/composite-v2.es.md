@@ -26,6 +26,8 @@ Un clasificador exterior y de dos a cuatro partes con un rol `: Type`. Conectore
 
 PlantUML no tiene un diagrama de estructura compuesta como tipo nativo. La entrega usa un contenedor y rectángulos interiores como aproximación de las partes y los conectores, y lo declara.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/composite-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

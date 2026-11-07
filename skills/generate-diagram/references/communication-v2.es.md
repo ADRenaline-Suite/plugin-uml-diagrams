@@ -27,6 +27,8 @@ De tres a cinco líneas de vida en horizontal, enlaces y mensajes numerados. Pre
 
 PlantUML no tiene un diagrama de comunicación como tipo nativo. La entrega usa un grafo de izquierda a derecha con mensajes numerados y lo declara como aproximación.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/communication-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

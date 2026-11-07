@@ -27,6 +27,8 @@ Three to five nodes laid out horizontally, with messages numbered 1, 2, 3 on the
 
 PlantUML has no first-class collaboration diagram (it remains an open PlantUML request). The delivery uses a graph with numbered messages and declares it as a layout approximation, not as a native collaboration frame.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/collaboration-v1.puml`. Replace the domain names and keep the shape.

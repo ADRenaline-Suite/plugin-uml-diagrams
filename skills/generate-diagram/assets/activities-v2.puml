@@ -1,10 +1,11 @@
 @startuml
+!include style.puml
 title How an order is confirmed and charged
 
-|Buyer|
+|#FFFFFF|Buyer|
 start
 :Confirm order;
-|Checkout|
+|#FFFFFF|Checkout|
 if (Coupon?) then (yes)
   :Apply discount;
 else (no)

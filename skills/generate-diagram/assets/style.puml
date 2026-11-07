@@ -1,0 +1,172 @@
+' Presentation for every diagram.
+' Source: OMG UML 2.5.1, clause 6.4.1.
+' Diagrams are read as black on white.
+' black = solid, white = unfilled, gray = a tone between the two.
+' A fill that does not repeat a written mark is not notation.
+' The face, the sizes, the spacing, and the gray hex are choices of this plugin.
+' They are not values in the specification.
+' Gray is not applied here. references/style.md says when #8A8A8A may be used.
+
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam handwritten false
+skinparam roundCorner 0
+skinparam dpi 120
+skinparam padding 8
+skinparam nodesep 40
+skinparam ranksep 40
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 13
+skinparam defaultFontColor #000000
+skinparam titleFontName SansSerif
+skinparam titleFontSize 14
+skinparam titleFontColor #000000
+skinparam ArrowColor #000000
+skinparam ArrowFontName SansSerif
+skinparam ArrowFontColor #000000
+skinparam ArrowThickness 1
+skinparam classAttributeIconSize 0
+hide circle
+
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+  HeaderBackgroundColor #FFFFFF
+  StereotypeFontColor #000000
+  AttributeFontColor #000000
+  BorderThickness 1
+}
+skinparam object {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+  AttributeFontColor #000000
+  StereotypeFontColor #000000
+}
+skinparam package {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+  StereotypeFontColor #000000
+}
+skinparam actor {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam component {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+  StereotypeFontColor #000000
+}
+skinparam interface {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam node {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam artifact {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam frame {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam folder {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam state {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+  AttributeFontColor #000000
+  StartColor #000000
+  EndColor #000000
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}
+skinparam sequence {
+  ParticipantBackgroundColor #FFFFFF
+  ParticipantBorderColor #000000
+  ParticipantFontColor #000000
+  ParticipantFontName SansSerif
+  ActorBackgroundColor #FFFFFF
+  ActorBorderColor #000000
+  ActorFontColor #000000
+  LifeLineBorderColor #000000
+  LifeLineBackgroundColor #FFFFFF
+  ArrowColor #000000
+  ArrowFontColor #000000
+  GroupBackgroundColor #FFFFFF
+  GroupBorderColor #000000
+  GroupFontColor #000000
+  GroupHeaderFontColor #000000
+  BoxBackgroundColor #FFFFFF
+  BoxBorderColor #000000
+  BoxFontColor #000000
+  DividerBackgroundColor #FFFFFF
+  DividerBorderColor #000000
+  DividerFontColor #000000
+}
+skinparam activity {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+  DiamondBackgroundColor #FFFFFF
+  DiamondBorderColor #000000
+  DiamondFontColor #000000
+  StartColor #000000
+  EndColor #000000
+  BarColor #000000
+}
+skinparam swimlane {
+  BorderColor #000000
+  TitleFontColor #000000
+  TitleFontName SansSerif
+  TitleBackgroundColor #FFFFFF
+}
+skinparam partition {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontColor #000000
+  FontName SansSerif
+}

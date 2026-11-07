@@ -13,6 +13,8 @@ If `adrenaline/uml-diagrams/` does not exist yet and `uml-diagrams/` at the proj
 
 Create the folder if it is missing. Do not write diagrams anywhere else.
 
+When the person names one project, app, service, or domain, put that subject's diagrams in `<subject>/`. A diagram of the whole product stays at this folder's root. `<NNN>` is the next free number in the whole output folder. The `archivo` cell is `<subject>/<file>` when there is a subject. This is `doc/arch/adr-008-asunto-subcarpeta.md`.
+
 Write the diagram title and the labels in the language of the request. If none is named, use the language the request is written in. Keep names the person already used. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`.
 
 Keep `ORIGIN.json` in that folder, beside `STATUS.md`. The fields are `suite` `ADRenaline-Suite`, `plugin` `plugin-uml-diagrams`, `repository` `https://github.com/ADRenaline-Suite/plugin-uml-diagrams`, and `convention` `adr-001`. It is not an `<NNN>` file and it has no row in `STATUS.md`. Write it when the folder is created, and again only if it is missing or a field differs. The marker names the folder. It does not say that each file inside is unchanged.

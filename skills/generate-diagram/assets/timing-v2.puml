@@ -1,4 +1,8 @@
 @startuml
+!include style.puml
+' PlantUML paints each trace from a palette. Monochrome keeps the trace a dark stroke.
+' The state name stays the mark. See references/style.md.
+skinparam monochrome true
 title When the order and the payment change during the charge
 
 robust "Order" as order

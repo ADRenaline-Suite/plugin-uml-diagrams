@@ -1,0 +1,14 @@
+---
+description: Keeps every UML diagram black on white, with gray only beside a written mark
+alwaysApply: true
+---
+
+# UML presentation
+
+Before drawing, read `skills/generate-diagram/SKILL.md` and `skills/generate-diagram/references/style.md`.
+
+Paste the body of `skills/generate-diagram/assets/style.puml` after `@startuml`. Do not leave `!include` in a file saved to the output folder.
+
+Fills are white. Strokes and text are black. There is no shadow. `#8A8A8A` is used only beside a caret on an inherited member, a written package import, or a visibility mark (`+`, `-`, `#`, `~`). An activity lane is `|#FFFFFF|Name|`.
+
+The mermaid block starts with the init line in `references/style.md`.

@@ -26,6 +26,8 @@ Three to five components and dashed dependencies with a readable stereotype. Int
 
 PlantUML draws components and dependencies natively. A v1 request does not use portin, portout, or composite-structure connectors.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/components-v1.puml`. Replace the domain names and keep the shape.

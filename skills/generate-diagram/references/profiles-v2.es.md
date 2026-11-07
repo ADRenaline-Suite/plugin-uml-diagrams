@@ -26,6 +26,8 @@ Un paquete «profile», un estereotipo y una metaclase. La flecha de extensión 
 
 PlantUML no tiene un diagrama de perfiles como tipo nativo. La entrega usa un paquete estereotipado, una clase «stereotype» y una generalización hacia la metaclase, y lo declara como aproximación de la extensión.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/profiles-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

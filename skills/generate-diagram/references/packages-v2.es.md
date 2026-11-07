@@ -26,6 +26,8 @@ Carpetas y dependencias discontinuas hacia el paquete más estable. Sin ciclos. 
 
 PlantUML dibuja los paquetes dentro de un diagrama de clases, que es la forma nativa de este diagrama.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/packages-v2.puml`. Sustituye los nombres del dominio y conserva la forma.

@@ -52,6 +52,7 @@ Keep the section headings, in this order: Plugin, Commands, Skills, Rules, Outpu
 
 - [**output-folder**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/output-folder.mdc) — Every diagram goes in `adrenaline/uml-diagrams/` (or `outputDirs["plugin-uml-diagrams"]` in `.cursor/adrenaline.json`).
 - [**uml-notation**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/uml-notation.mdc) — Do not mix UML 1 and UML 2 notation; use only the matching reference.
+- [**uml-style**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/uml-style.mdc) — Keep every diagram black on white. Gray only beside a written mark.
 
 ## Output
 
@@ -63,7 +64,7 @@ Keep the section headings, in this order: Plugin, Commands, Skills, Rules, Outpu
 | --- | --- |
 | `.puml` | PlantUML source, editable |
 | `.svg` | Rendered diagram image |
-| `.md` | Mermaid version (classes, sequence, states) |
+| `.md` | Mermaid version (classes, sequence, states) and a reading under the diagram |
 | `STATUS.md` | State of each diagram |
 | `ORIGIN.json` | Folder marker: `suite`, `plugin`, `repository`, `convention` `adr-001`. Not an `<NNN>` file |
 

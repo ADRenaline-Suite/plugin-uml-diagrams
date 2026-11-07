@@ -27,6 +27,8 @@ One classifier, three to six states, a transition `event [guard] / effect`. Regi
 
 PlantUML draws the state machine natively.
 
+Presentation follows [style.md](style.md): black on white, from the block in `../assets/style.puml`. This example leaves that block out.
+
 ## Template
 
 `../assets/state-machine-v2.puml`. Replace the domain names and keep the shape.

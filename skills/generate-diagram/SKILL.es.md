@@ -16,7 +16,7 @@ Fuente de v2: OMG UML 2.5.1, anexo A (14 diagramas). Fuente de v1: OMG UML 1.4 y
 ## Antes de dibujar
 
 1. Versión y tipo. Si este turno viene de un comando, los dos ya están fijos. Si el diagrama ya está en la conversación, toma los dos de él (ver «Guardar un diagrama de la conversación»). Si el pedido usa un constructo que existe en una sola versión (`alt`, `opt`, `loop`, `par`, puertos, pins, flujo de tokens), esa es la versión. Si no, si falta el tipo, pídelo y no dibujes todavía; si solo falta la versión, propone UML 2 y espera la confirmación.
-2. Lee solo `references/<id>.md` de esa versión y ese tipo, y empieza desde `assets/<id>.puml`. Para clases, secuencia y estados, lee también [references/mermaid.es.md](references/mermaid.es.md).
+2. Lee solo `references/<id>.es.md` de esa versión y ese tipo, y [references/style.es.md](references/style.es.md). Empieza desde `assets/<id>.puml`. Para clases, secuencia y estados, lee también [references/mermaid.es.md](references/mermaid.es.md).
 3. El diagrama responde una pregunta, con nombres del dominio de la persona y un título que enuncia la pregunta. Contiene lo que la persona pidió: ni más elementos, ni menos.
 
 ## Qué diagrama corresponde a la pregunta
@@ -71,7 +71,7 @@ Después sigue Entrega.
 
 ## Entrega
 
-Guarda la fuente PlantUML como `<folder>/<NNN>-<id>-<topic>.puml` y la imagen renderizada junto a ella como `<folder>/<NNN>-<id>-<topic>.svg`. `<folder>` es `adrenaline/uml-diagrams/` en la raíz del proyecto, salvo que `.cursor/adrenaline.json` fije `outputDirs["plugin-uml-diagrams"]` en una ruta relativa sin `..`. Si `adrenaline/uml-diagrams/` aún no existe y `uml-diagrams/` en la raíz ya tiene el `ORIGIN.json` o el `STATUS.md` de este plugin, `<folder>` sigue siendo `uml-diagrams/` y la entrega lo dice. `<topic>` es el título en kebab-case. `<NNN>` es un entero monótono en esa carpeta (001, 002, …); nunca reutilices un número para un diagrama distinto. Crea la carpeta si falta.
+Guarda la fuente PlantUML como `<folder>/<NNN>-<id>-<topic>.puml` y la imagen renderizada junto a ella como `<folder>/<NNN>-<id>-<topic>.svg`. `<folder>` es `adrenaline/uml-diagrams/` en la raíz del proyecto, salvo que `.cursor/adrenaline.json` fije `outputDirs["plugin-uml-diagrams"]` en una ruta relativa sin `..`. Si `adrenaline/uml-diagrams/` aún no existe y `uml-diagrams/` en la raíz ya tiene el `ORIGIN.json` o el `STATUS.md` de este plugin, `<folder>` sigue siendo `uml-diagrams/` y la entrega lo dice. `<topic>` es el título en kebab-case. `<NNN>` es un entero monótono en esa carpeta (001, 002, …); nunca reutilices un número para un diagrama distinto. Crea la carpeta si falta. Si la persona nombra un proyecto, una app, un servicio o un dominio, los archivos de ese asunto van en `<asunto>/` dentro de `<folder>`. Un diagrama de todo el producto se queda en la raíz de `<folder>`. `<NNN>` es el siguiente libre de toda la carpeta de salida. La celda `archivo` es `<asunto>/<archivo>` cuando hay asunto (`doc/arch/adr-008-asunto-subcarpeta.md`).
 
 Escribe el título del diagrama y las etiquetas en el idioma del pedido. Si el pedido nombra un idioma, usa ese. Si no, usa el idioma en el que está escrito el pedido. Conserva los nombres que la persona ya usó. Las columnas de `STATUS.md` siguen `N`, `archivo`, `estado`, `sustituye`, `notas`. La respuesta usa ese mismo idioma.
 
@@ -87,6 +87,8 @@ Si ya existe un archivo de ese tema, no preguntes. Decide a partir del texto de 
 
 Dibuja solo lo que pide el texto de la persona. No ofrezcas extender el modelo.
 
+La presentación sigue [references/style.es.md](references/style.es.md). Después de `@startuml`, pega el cuerpo de `assets/style.puml`. No dejes `!include` en el archivo guardado. El bloque mermaid empieza con la línea init de esa referencia.
+
 Renderiza el SVG con el primer PlantUML que esté disponible:
 
 ```text
@@ -97,7 +99,7 @@ docker run --rm -v "<absolute folder>:/data" plantuml/plantuml -tsvg -charset UT
 
 Si el comando falla o el SVG contiene `Syntax Error`, corrige la fuente y vuelve a renderizar. Si no hay PlantUML disponible, conserva el `.puml`, di que el SVG no se generó y da el comando para generarlo.
 
-Formato secundario: para clases, secuencia y estados, escribe también `<folder>/<NNN>-<id>-<topic>.md` con el mismo diagrama en un bloque `mermaid`, siguiendo `references/mermaid.md`. Los demás tipos no reciben archivo Mermaid. El archivo Mermaid comparte `<NNN>` con el par PlantUML.
+Formato secundario: para clases, secuencia y estados, escribe también `<folder>/<NNN>-<id>-<topic>.md` con el mismo diagrama en un bloque `mermaid` y una lectura después, siguiendo `references/mermaid.es.md`. Los demás tipos no reciben archivo Mermaid. El archivo Mermaid comparte `<NNN>` con el par PlantUML.
 
 ```text
 Notation: <version>, <type>. Source: <the one in the reference>.
@@ -119,7 +121,7 @@ Cuando la entrega no tiene `.md`, pega un `flowchart` de `mermaid` con los mismo
 
 ## Terminado
 
-Antes de cerrar, evalúa esta lista y la lista `## Done` de `references/<id>.md` para este diagrama. Si el id es un diagrama de clases, de secuencia o de estados, evalúa también `## Done` en `references/mermaid.md`. Un comando fija el id. Cada ítem es verdadero, o corriges el diagrama en este turno. No dejes un archivo que falle un ítem. No lo marques `accepted` mientras un ítem falle. Si el tipo sigue faltando, o un diagrama fuera del catálogo no tiene dónde guardarse, pregunta y no escribas archivos.
+Antes de cerrar, evalúa esta lista, la lista `## Terminado` de `references/style.es.md` y la lista `## Terminado` de `references/<id>.es.md` para este diagrama. Si el id es un diagrama de clases, de secuencia o de estados, evalúa también `## Terminado` en `references/mermaid.es.md`. Un comando fija el id. Cada ítem es verdadero, o corriges el diagrama en este turno. No dejes un archivo que falle un ítem. No lo marques `accepted` mientras un ítem falle. Si el tipo sigue faltando, o un diagrama fuera del catálogo no tiene dónde guardarse, pregunta y no escribas archivos.
 
 - Un diagrama, una pregunta, una versión. El archivo usa solo la referencia de esa versión. Un archivo v1 no tiene un constructo que este skill lista como exclusivo de v2. Una partición exigida por las reglas de versión se nombra en la línea `Fidelity`.
 - Los archivos están solo en la carpeta de salida: `.puml` y `.svg` con el mismo `<NNN>`, `<id>` y `<topic>`. `<NNN>` no se reutiliza. `STATUS.md` coincide con ellos.
@@ -130,7 +132,8 @@ Antes de cerrar, evalúa esta lista y la lista `## Done` de `references/<id>.md`
 - La respuesta tiene las líneas `Notation`, `Render`, `Fidelity`, `Guide`, `Files`, `Status` y `Mermaid`, y coinciden con los archivos. Una diferencia que no está en `Fidelity` es un defecto: corrige el archivo o la línea antes de cerrar.
 - La respuesta dibuja un bloque `mermaid` y no incluye un bloque PlantUML ni una imagen Markdown del `.svg`. Si se escribió un `.md`, ese bloque es el del archivo. Si no hay `.md`, el bloque es un `flowchart` con los mismos pasos, decisiones y etiquetas que el `.puml`, y no se guarda.
 - El SVG no tiene `Syntax Error`. Si no hay PlantUML disponible, el `.puml` se queda, la respuesta dice que el SVG no se generó y da el comando.
-- Mermaid existe solo para clases, secuencia y estados, y solo cuando `mermaid.md` dice que se escriba. Cualquier otro id no tiene archivo Mermaid.
+- Mermaid existe solo para clases, secuencia y estados, y solo cuando `mermaid.es.md` dice que se escriba. Cualquier otro id no tiene archivo Mermaid. Cuando el `.md` existe, una lectura sigue al diagrama y usa solo nombres de él.
+- El `.puml` guardado contiene el cuerpo de `assets/style.puml` y no tiene `!include`. Los rellenos son `#FFFFFF`, el trazo y el texto son `#000000`, y `#8A8A8A` aparece solo junto a una marca escrita de `references/style.es.md`. El bloque mermaid empieza con la línea init de esa referencia.
 
 ## Catálogo
 

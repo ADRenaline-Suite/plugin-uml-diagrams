@@ -4,6 +4,15 @@
 
 The version stays at 0.0.1 until the maintainer declares this plugin ready for distribution. The notes below record the work. They are not separate releases. Git tags `v0.1.0` and `v0.2.0` already exist and are left as they are.
 
+### 2026-11-07
+
+#### Added
+
+- The Mermaid file for classes, sequence, and states ends with a reading in the language of the request. The reading uses only names that appear in the diagram.
+- The Mermaid init paints the figure's own sheet white, so black ink stays readable when the editor theme is dark.
+- Presentation follows OMG UML 2.5.1 clause 6.4.1: black on white. `assets/style.puml` is the block every diagram pastes after `@startuml`. `references/style.md` names the three cases where `#8A8A8A` may sit beside a written mark. The mermaid block uses the same black-on-white init.
+- Rule `uml-style`. Claude Code keeps the same limits inside the skill, because it does not load rules.
+
 ### 2026-10-31
 
 #### Added

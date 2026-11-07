@@ -27,6 +27,8 @@ Un estado inicial, acciones como estados, una decisión con las dos salidas etiq
 
 PlantUML dibuja el grafo con la sintaxis antigua `(*)` y acciones entre comillas. Esa es la sintaxis de este pedido, no `start` / `if` / `stop`.
 
+La presentación sigue [style.es.md](style.es.md): negro sobre blanco, con el bloque de `../assets/style.puml`. Este ejemplo omite ese bloque.
+
 ## Plantilla
 
 `../assets/activities-v1.puml`. Sustituye los nombres del dominio y conserva la forma.

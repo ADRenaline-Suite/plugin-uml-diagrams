@@ -25,12 +25,18 @@ También se omite cuando el dibujo usa un elemento que Mermaid no tiene, y ese e
 
 ## Archivo
 
-`<folder>/<id>-<topic>.md`, junto al `.puml` del mismo nombre. Lleva el título como encabezado y un bloque `mermaid`. GitHub, GitLab y Azure DevOps lo renderizan sin instalar nada.
+`<folder>/<NNN>-<id>-<topic>.md`, junto al `.puml` con el mismo `<NNN>`, `<id>` y `<topic>`. Lleva el título como encabezado, un bloque `mermaid` y después una lectura. GitHub, GitLab y Azure DevOps renderizan el diagrama sin instalar nada.
+
+La lectura es un encabezado en el idioma del pedido. En español el encabezado es `## Lectura`. Debajo, uno o dos párrafos dicen qué responde el dibujo y el camino que sigue quien lo lee. Usan solo nombres que aparecen en el diagrama. No añaden un participante, un estado, un mensaje ni una relación.
 
 El bloque Mermaid dibuja los mismos elementos, nombres y relaciones que el `.puml`. Siguen vigentes las reglas de versión de la referencia:
 
 - `sequence-v1` no usa `alt`, `opt`, `loop`, `par`, `critical` ni `break`.
 - `states-v1` no usa regiones concurrentes (`--`).
+
+## Presentación
+
+El bloque empieza con la línea init de [style.es.md](style.es.md), para que esta vista siga en negro sobre blanco junto al archivo PlantUML.
 
 ## Notación
 
@@ -47,6 +53,7 @@ Diagrama de clases, el mismo contenido que `classes-v2.puml`:
 # What data an order has and how it relates to its payment
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000', 'textColor': '#000000', 'actorBkg': '#ffffff', 'actorBorder': '#000000', 'actorTextColor': '#000000', 'signalColor': '#000000', 'signalTextColor': '#000000', 'labelTextColor': '#000000', 'loopTextColor': '#000000', 'noteBkgColor': '#ffffff', 'noteTextColor': '#000000', 'noteBorderColor': '#000000', 'activationBkgColor': '#ffffff', 'activationBorderColor': '#000000'}, 'themeCSS': 'svg { background-color: #ffffff !important; }'}}%%
 classDiagram
   class Order {
     +number : String
@@ -64,6 +71,10 @@ classDiagram
   Order "1" *-- "1..*" OrderLine : contains
   Order "1" --> "0..1" Payment : settled with
 ```
+
+## Lectura
+
+Un pedido contiene sus líneas, y cada línea es parte de ese pedido. El pedido puede liquidarse con un pago.
 ````
 
 Diagrama de secuencia, el mismo contenido que `sequence-v2.puml`:
@@ -72,6 +83,7 @@ Diagrama de secuencia, el mismo contenido que `sequence-v2.puml`:
 # What happens when paying if the bank authorizes or declines
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000', 'textColor': '#000000', 'actorBkg': '#ffffff', 'actorBorder': '#000000', 'actorTextColor': '#000000', 'signalColor': '#000000', 'signalTextColor': '#000000', 'labelTextColor': '#000000', 'loopTextColor': '#000000', 'noteBkgColor': '#ffffff', 'noteTextColor': '#000000', 'noteBorderColor': '#000000', 'activationBkgColor': '#ffffff', 'activationBorderColor': '#000000'}, 'themeCSS': 'svg { background-color: #ffffff !important; }'}}%%
 sequenceDiagram
   actor Buyer
   participant Checkout
@@ -85,6 +97,10 @@ sequenceDiagram
     Checkout-->>Buyer: payment declined
   end
 ```
+
+## Lectura
+
+El comprador pide a la caja que cobre. Si el banco autoriza el cargo, la caja devuelve un recibo. Si el banco rechaza, la caja le dice al comprador que el pago fue rechazado.
 ````
 
 Máquina de estados, el mismo contenido que `state-machine-v2.puml`:
@@ -93,6 +109,7 @@ Máquina de estados, el mismo contenido que `state-machine-v2.puml`:
 # Life of an order
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000', 'textColor': '#000000', 'actorBkg': '#ffffff', 'actorBorder': '#000000', 'actorTextColor': '#000000', 'signalColor': '#000000', 'signalTextColor': '#000000', 'labelTextColor': '#000000', 'loopTextColor': '#000000', 'noteBkgColor': '#ffffff', 'noteTextColor': '#000000', 'noteBorderColor': '#000000', 'activationBkgColor': '#ffffff', 'activationBorderColor': '#000000'}, 'themeCSS': 'svg { background-color: #ffffff !important; }'}}%%
 stateDiagram-v2
   [*] --> Draft
   Draft --> Confirmed : confirm
@@ -101,6 +118,10 @@ stateDiagram-v2
   Paid --> [*]
   Cancelled --> [*]
 ```
+
+## Lectura
+
+Un pedido empieza en borrador. Confirmarlo lo pasa a confirmado. Desde ahí, un pago aceptado lo deja pagado, y cancelarlo lo termina. Un pedido pagado queda cerrado.
 ````
 
 ## Terminado
@@ -110,3 +131,5 @@ Este archivo no es una situación. Evalúalo solo cuando el id del diagrama es `
 - El bloque usa el tipo de Mermaid de la tabla de arriba y los mismos elementos, nombres y relaciones que el `.puml`.
 - Un constructo que esta referencia dice que Mermaid no puede dibujar se omite aquí, se nombra en la entrega y se conserva en el archivo PlantUML.
 - `sequence-v1` no tiene fragmento combinado. `states-v1` no tiene región concurrente.
+- El bloque empieza con la línea init de `style.es.md`.
+- Después del bloque, una lectura en el idioma del pedido usa solo nombres del diagrama.
