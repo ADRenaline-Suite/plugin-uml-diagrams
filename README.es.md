@@ -20,6 +20,8 @@ Cursor y Claude Code:
 
 - 24 comandos: `/uml-help` (catálogo de una línea de skills, rules y comandos) y un comando por diagrama. En Cursor, `/uml-help` o `/uml-sequence-v2`. En Claude Code, `/plugin-uml-diagrams:uml-help`.
 
+- Un agente, `plugin-uml-diagrams`. Sigue los skills de este plugin y dice cuándo pedir otro plugin. El método se queda en el skill.
+
 Solo Cursor:
 
 - Rule `uml-notation`, que impide mezclar las dos notaciones.

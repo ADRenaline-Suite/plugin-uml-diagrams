@@ -13,7 +13,7 @@ If `adrenaline/uml-diagrams/` does not exist yet and `uml-diagrams/` at the proj
 
 Create the folder if it is missing. Do not write diagrams anywhere else.
 
-When the person names one project, app, service, or domain, put that subject's diagrams in `<subject>/`. A diagram of the whole product stays at this folder's root. `<NNN>` is the next free number in the whole output folder. The `archivo` cell is `<subject>/<file>` when there is a subject. This is `doc/arch/adr-008-asunto-subcarpeta.md`.
+When the person names one project, app, service, or domain, put that subject's diagrams in `<subject>/`. A diagram of the whole product stays at this folder's root. `<NNN>` is the next free number in the whole output folder. The `archivo` cell is `<subject>/<file>` when there is a subject. This is `adrenaline/software-architect/008-adr-asunto-subcarpeta.md`.
 
 Write the diagram title and the labels in the language of the request. If none is named, use the language the request is written in. Keep names the person already used. `STATUS.md` columns stay `N`, `archivo`, `estado`, `sustituye`, `notas`.
 

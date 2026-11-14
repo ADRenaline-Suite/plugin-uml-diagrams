@@ -1,6 +1,6 @@
 ---
 name: uml-help
-description: "ADRenaline. Help: catalog of plugin-uml-diagrams (skills, rules, commands)."
+description: "ADRenaline. Help: catalog of plugin-uml-diagrams (skills, rules, commands, agents)."
 ---
 
 # Help — ADRenaline UML Diagrams
@@ -11,7 +11,7 @@ When this help command is the first command in the message, every command, skill
 
 Write the sentences in the language of the request. Keep command names, file ids, and every URL unchanged. Every id is a markdown link to the GitHub URL on its line. Do not print a repository `name` as the visible label of a plugin.
 
-Keep the section headings, in this order: Plugin, Commands, Skills, Rules, Output, Not in this plugin. The title and the Plugin line show `ADRenaline` plus the `displayName`, then one sentence on what the plugin does. Under Commands, group the lines by the skill named in the line. Each group opens with that skill name linked to its SKILL.md. One line per item: the linked id, then the sentence. Output links this plugin's GitHub repository under that same label. A plugin under Not in this plugin uses `ADRenaline` plus its short name, and links to its GitHub repository only when that repository exists.
+Keep the section headings, in this order: Plugin, Commands, Skills, Rules, Agents, Output, Not in this plugin. The title and the Plugin line show `ADRenaline` plus the `displayName`, then one sentence on what the plugin does. Under Commands, group the lines by the skill named in the line. Each group opens with that skill name linked to its SKILL.md. One line per item: the linked id, then the sentence. Output links this plugin's GitHub repository under that same label. A plugin under Not in this plugin uses `ADRenaline` plus its short name, and links to its GitHub repository only when that repository exists.
 
 ## Plugin
 
@@ -53,6 +53,10 @@ Keep the section headings, in this order: Plugin, Commands, Skills, Rules, Outpu
 - [**output-folder**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/output-folder.mdc) — Every diagram goes in `adrenaline/uml-diagrams/` (or `outputDirs["plugin-uml-diagrams"]` in `.cursor/adrenaline.json`).
 - [**uml-notation**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/uml-notation.mdc) — Do not mix UML 1 and UML 2 notation; use only the matching reference.
 - [**uml-style**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/rules/uml-style.mdc) — Keep every diagram black on white. Gray only beside a written mark.
+
+## Agents
+
+- [**plugin-uml-diagrams**](https://github.com/ADRenaline-Suite/plugin-uml-diagrams/blob/main/agents/plugin-uml-diagrams.md) — Use when the request asks for a UML diagram. Follow generate-diagram. Do not write the architecture decision, the use case, or the domain model.
 
 ## Output
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- One agent, `plugin-uml-diagrams`. It follows this plugin's skills and names when to ask another plugin. The method stays in the skill.
+
 ## [0.0.1] - 2026-10-28
 
 The version stays at 0.0.1 until the maintainer declares this plugin ready for distribution. The notes below record the work. They are not separate releases. Git tags `v0.1.0` and `v0.2.0` already exist and are left as they are.
